@@ -1,0 +1,105 @@
+/* Arbisoft Open Source Team - Dark Deck Design System */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-container {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.slide-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.grid-pattern {
+  position: absolute;
+  top: 0; left: 0;
+  width: 1280px;
+  height: 720px;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.header {
+  position: absolute;
+  top: 40px; left: 60px;
+  width: 1160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 22px;
+}
+.logo-text { font-size: 20px; font-weight: 700; color: #f8fafc; line-height: 1; }
+.logo-subtext { font-size: 14px; color: #94a3b8; margin-top: 2px; }
+
+.nav-dots { display: flex; gap: 12px; }
+.nav-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+.nav-dot.active { background: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+
+.footer {
+  position: absolute;
+  top: 640px; left: 60px;
+  width: 1160px; height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.footer-left, .footer-right { display: flex; align-items: center; gap: 16px; }
+.footer-text { font-size: 16px; color: #64748b; letter-spacing: 0.05em; }
+.page-indicator { font-size: 16px; color: #64748b; }
+.page-number { color: #f8fafc; font-weight: 600; }
+.nav-btn {
+  width: 40px; height: 40px;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #94a3b8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.nav-btn:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.4);
+}
+.nav-btn.disabled { opacity: .3; pointer-events: none; }
+
+@media print {
+  body { display: block; }
+  .slide-container { width: 1280px; height: 720px; }
+}

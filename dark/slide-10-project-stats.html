@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Slide 10</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 110px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 48px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; line-height: 1.1; }
+  .section-subtitle { font-size: 18px; color: #94a3b8; margin-bottom: 24px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .content-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+  .panel { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 22px; }
+  .panel h2 { font-size: 14px; font-weight: 700; color: #f8fafc; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; color: #64748b; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 6px 4px; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 700; }
+  td { padding: 5px 4px; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  td.num { text-align: right; font-family: 'JetBrains Mono', monospace; }
+  td.proj { font-weight: 600; color: #e2e8f0; }
+  tr:hover td { background: rgba(59,130,246,0.05); }
+  .merged { color: #4ade80; font-weight: 700; }
+  .top td { background: rgba(59,130,246,0.08); }
+  .at-glance { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
+  .glance-card { background: rgba(15,23,42,0.4); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 14px; text-align: center; }
+  .glance-num { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+  .glance-label { font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; font-weight: 700; }
+  .domain-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 11px; }
+  .domain-row:last-child { border-bottom: none; }
+  .domain-row .name { color: #e2e8f0; font-weight: 600; }
+  .domain-row .desc { color: #64748b; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-09-team-stats.html" data-next="slide-11-transitions.html" data-first="slide-01-intro.html" data-last="slide-15-cta.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-code-branch"></i></div>
+      <div><div class="logo-text">Arbisoft</div><div class="logo-subtext">Open Source Team</div></div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">Project <span class="highlight">Stats</span></div>
+    <div class="section-subtitle">26 projects with merged PRs</div>
+
+    <div class="content-grid">
+      <div class="panel">
+        <h2>Contributions by Project</h2>
+        <table>
+          <thead><tr><th>#</th><th>Project</th><th class="num">Contribs</th><th class="num">Merged</th></tr></thead>
+          <tbody>
+            <tr class="top"><td>1</td><td class="proj">openedx</td><td class="num">255</td><td class="num merged">208</td></tr>
+            <tr class="top"><td>2</td><td class="proj">meilisearch</td><td class="num">19</td><td class="num merged">16</td></tr>
+            <tr class="top"><td>3</td><td class="proj">Pressingly</td><td class="num">16</td><td class="num merged">14</td></tr>
+            <tr><td>4</td><td class="proj">awais786</td><td class="num">9</td><td class="num merged">4</td></tr>
+            <tr><td>5</td><td class="proj">wagtail</td><td class="num">8</td><td class="num merged">2</td></tr>
+            <tr><td>6</td><td class="proj">BerriAI</td><td class="num">7</td><td class="num merged">3</td></tr>
+            <tr><td>7</td><td class="proj">arbisoft</td><td class="num">6</td><td class="num merged">6</td></tr>
+            <tr><td>8</td><td class="proj">diesel-rs</td><td class="num">5</td><td class="num merged">5</td></tr>
+            <tr><td>9</td><td class="proj">django-oscar</td><td class="num">5</td><td class="num merged">5</td></tr>
+            <tr><td>10</td><td class="proj">edx</td><td class="num">5</td><td class="num merged">3</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>At a Glance</h2>
+        <div class="at-glance">
+          <div class="glance-card"><div class="glance-num">26</div><div class="glance-label">Projects</div></div>
+          <div class="glance-card"><div class="glance-num">308</div><div class="glance-label">Contributions</div></div>
+          <div class="glance-card"><div class="glance-num">246</div><div class="glance-label">Merged</div></div>
+          <div class="glance-card"><div class="glance-num">80%</div><div class="glance-label">Merge Rate</div></div>
+        </div>
+        <h2 style="margin-top: 16px;">Domains</h2>
+        <div class="domain-row"><span class="name">EdTech</span><span class="desc">openedx, edx, edly</span></div>
+        <div class="domain-row"><span class="name">Search</span><span class="desc">meilisearch</span></div>
+        <div class="domain-row"><span class="name">CMS</span><span class="desc">wagtail</span></div>
+        <div class="domain-row"><span class="name">LLM</span><span class="desc">BerriAI, LangGraph</span></div>
+        <div class="domain-row"><span class="name">Auth/SSO</span><span class="desc">Pressingly</span></div>
+        <div class="domain-row"><span class="name">Rust</span><span class="desc">diesel-rs, RISC-V</span></div>
+        <div class="domain-row"><span class="name">E-commerce</span><span class="desc">django-oscar</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">10</span> / 15</span>
+      <a class="nav-btn" href="slide-11-transitions.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

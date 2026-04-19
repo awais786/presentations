@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Slide 8</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 110px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 44px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; line-height: 1.1; }
+  .section-subtitle { font-size: 16px; color: #94a3b8; margin-bottom: 24px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .eng-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .eng-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px; }
+  .eng-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .eng-title { font-size: 15px; font-weight: 700; color: #f8fafc; }
+  .tag { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .5px; background: rgba(59,130,246,0.15); color: #3b82f6; }
+  .tag.client { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .tag.internal { background: rgba(251,146,60,0.15); color: #fb923c; }
+  .tag.ai { background: rgba(139,92,246,0.15); color: #a78bfa; }
+  .eng-desc { font-size: 12px; color: #cbd5e1; line-height: 1.45; }
+  .eng-desc strong { color: #f8fafc; }
+  .bullets { list-style: none; padding: 0; margin-top: 8px; }
+  .bullets li { font-size: 11.5px; color: #cbd5e1; padding: 2px 0 2px 14px; position: relative; line-height: 1.4; }
+  .bullets li::before { content: ""; position: absolute; left: 0; top: 8px; width: 4px; height: 4px; border-radius: 50%; background: #3b82f6; }
+  .bullets li strong { color: #f8fafc; }
+  .projects-strip { margin-top: 14px; display: flex; gap: 6px; flex-wrap: wrap; align-items: center; padding: 10px 14px; background: rgba(15,23,42,0.4); border-radius: 10px; }
+  .projects-strip-label { font-size: 9px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-right: 8px; }
+  .proj-pill { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); color: #cbd5e1; font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 100px; }
+  .proj-pill.oss { border-color: rgba(59,130,246,0.3); color: #60a5fa; }
+  .proj-pill.int { border-color: rgba(251,146,60,0.3); color: #fb923c; }
+  .proj-pill.cli { border-color: rgba(34,197,94,0.3); color: #4ade80; }
+  .proj-pill.ai { border-color: rgba(139,92,246,0.3); color: #a78bfa; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-07-how-we-work.html" data-next="slide-09-team-stats.html" data-first="slide-01-intro.html" data-last="slide-15-cta.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-code-branch"></i></div>
+      <div><div class="logo-text">Arbisoft</div><div class="logo-subtext">Open Source Team</div></div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">Major <span class="highlight">Engagements</span></div>
+    <div class="section-subtitle">Platform upgrades, client integrations, and AI work</div>
+
+    <div class="eng-grid">
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Django 5.2 - OpenEdX</div><span class="tag">OSS</span></div>
+        <div class="eng-desc">Community-wide upgrade across OpenEdX.</div>
+        <ul class="bullets">
+          <li>PRs across <strong>100+ repos</strong></li>
+          <li><strong>100+ APIs</strong> migrated to DRF</li>
+          <li>Announce - Discovery - Delivery</li>
+        </ul>
+      </div>
+
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Internal Upgrades</div><span class="tag internal">Internal</span></div>
+        <div class="eng-desc">Product platform version bumps.</div>
+        <ul class="bullets">
+          <li><strong>Hirestream</strong> Django</li>
+          <li><strong>Workstream</strong> Django + Odoo</li>
+        </ul>
+      </div>
+
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Moneta - SSO</div><span class="tag client">Client · Ongoing</span></div>
+        <div class="eng-desc">End-to-end SSO delivery with Pressingly mPass - active engagement.</div>
+      </div>
+
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Wagtail Plugins</div><span class="tag">OSS</span></div>
+        <ul class="bullets">
+          <li><strong>Calendar</strong> plugin</li>
+          <li><strong>Image import</strong> (wagtail-image-from-url)</li>
+          <li><strong>AI Chatbot</strong> plugin</li>
+        </ul>
+      </div>
+
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Django Oscar</div><span class="tag">OSS</span></div>
+        <div class="eng-desc">Role-based access control contributions.</div>
+      </div>
+
+      <div class="eng-card">
+        <div class="eng-head"><div class="eng-title">Apache DevLake</div><span class="tag">OSS · Apache</span></div>
+        <div class="eng-desc"><strong>Asana plugin + server setup</strong> - shipped to Apache DevLake.</div>
+      </div>
+
+      <div class="eng-card" style="grid-column: span 3;">
+        <div class="eng-head"><div class="eng-title">AI Work</div><span class="tag ai">AI</span></div>
+        <ul class="bullets" style="columns: 3; gap: 20px;">
+          <li><strong>Wagtail AI Chatbot</strong> - AI-powered CMS assistant</li>
+          <li><strong>AI HR Assistant</strong> - real-time POD Q&amp;A (headcount, contractors) · <em>in progress</em></li>
+          <li><strong>AI Agent</strong> - explores OSS issues, evaluates, files to Taiga, ships fixes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="projects-strip">
+      <span class="projects-strip-label">Projects &amp; Platforms</span>
+      <span class="proj-pill oss">OpenEdX</span>
+      <span class="proj-pill oss">Wagtail</span>
+      <span class="proj-pill oss">BerriAI</span>
+      <span class="proj-pill oss">LangGraph</span>
+      <span class="proj-pill oss">django-oscar</span>
+      <span class="proj-pill oss">diesel-rs</span>
+      <span class="proj-pill oss">Apache DevLake</span>
+      <span class="proj-pill int">Workstream</span>
+      <span class="proj-pill int">Hirestream</span>
+      <span class="proj-pill int">Odoo</span>
+      <span class="proj-pill cli">Moneta</span>
+      <span class="proj-pill cli">Pressingly</span>
+      <span class="proj-pill ai">Taiga</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">08</span> / 15</span>
+      <a class="nav-btn" href="slide-09-team-stats.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
