@@ -1,2 +1,6 @@
 .vercel
 .DS_Store
+.idea/
+_slide-pngs/
+.venv/
+*.pptx
