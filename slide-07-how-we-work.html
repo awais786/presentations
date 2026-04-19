@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How We Work - Arbisoft Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 24px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .lead { text-align: center; font-size: 17px; color: #424a53; max-width: 900px; margin: 0 auto 24px; line-height: 1.55; font-weight: 500; }
+  .lead strong { color: #0969da; }
+  .steps { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 18px; align-content: stretch; }
+  .step { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 14px; padding: 22px 24px; position: relative; overflow: hidden; transition: transform .2s, border-color .2s, box-shadow .2s; display: flex; flex-direction: column; }
+  .step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #0969da, #218bff); }
+  .step:hover { transform: translateY(-3px); border-color: #0969da; box-shadow: 0 6px 18px rgba(9,105,218,.12); }
+  .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .step-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, #0969da, #218bff); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; letter-spacing: -.5px; }
+  .step-title { font-size: 18px; font-weight: 800; color: #1f2328; line-height: 1.2; }
+  .step-desc { font-size: 13.5px; color: #424a53; line-height: 1.55; flex: 1; }
+  .step-desc strong { color: #1f2328; font-weight: 700; }
+  .targets { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .target { background: #ddf4ff; color: #0969da; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 8px; letter-spacing: .3px; }
+  footer { margin-top: 20px; text-align: center; color: #656d76; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>How We Work</h1>
+  <div class="sub">Arbisoft Open Source Team · Our playbook for building a credible contribution program</div>
+</header>
+
+<div class="lead">
+  Open source success isn't accidental. We set up a <strong>structured playbook</strong> from day one - pick the right repos, build community presence, and ship consistently.
+</div>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">01</div>
+      <div class="step-title">Pick Focus Repos</div>
+    </div>
+    <div class="step-desc">Started with <strong>4 strategic repos</strong> aligned to Arbisoft's delivery stack - not random drive-by PRs.</div>
+    <div class="targets">
+      <span class="target">Wagtail</span>
+      <span class="target">Django Oscar</span>
+      <span class="target">OpenEdX</span>
+      <span class="target">Strapi</span>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">02</div>
+      <div class="step-title">Assign Ownership</div>
+    </div>
+    <div class="step-desc">Each engineer owns a program. <strong>One repo, one lead</strong> - accountability, continuity, and deep context over time.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">03</div>
+      <div class="step-title">Embed in Community</div>
+    </div>
+    <div class="step-desc">Joined <strong>forums, Slack channels, mailing lists</strong>. Attended community calls. Learned the people, the culture, and the roadmap.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">04</div>
+      <div class="step-title">Discover &amp; Plan</div>
+    </div>
+    <div class="step-desc">Triaged issues, studied <strong>long-term feature plans</strong>, and mapped contribution opportunities to team skills and interests.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">05</div>
+      <div class="step-title">Ship Pull Requests</div>
+    </div>
+    <div class="step-desc">Start small, build trust. Pick issues, submit PRs, iterate on reviews. <strong>Merged PRs</strong> compound into credibility.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <div class="step-num">06</div>
+      <div class="step-title">Internal Sync</div>
+    </div>
+    <div class="step-desc"><strong>Weekly team sessions</strong> - blockers, learnings, review patterns, and cross-repo knowledge sharing. The team lifts the team.</div>
+  </div>
+</div>
+
+<footer>Targeted repos · owned programs · community presence · consistent delivery</footer>
+<!-- NAV:START -->
+<style>
+  .deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+  .deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+  .deck-nav.prev { left: 18px; }
+  .deck-nav.next { right: 18px; }
+  .deck-nav.disabled { opacity: .15; pointer-events: none; }
+  .deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+  .deck-counter:hover { opacity: 1; }
+  body:hover .deck-nav { opacity: .85; }
+  @media print { .deck-nav, .deck-counter { display: none !important; } }
+</style>
+<a class="deck-nav prev" href="slide-06-past.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-08-engagements.html" title="Next">&#8250;</a>
+<div class="deck-counter">07 / 15</div>
+<script>
+(function() {
+  var prev = 'slide-06-past.html';
+  var next = 'slide-08-engagements.html';
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      if (next) { e.preventDefault(); window.location.href = next; }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (prev) { e.preventDefault(); window.location.href = prev; }
+    } else if (e.key === 'Home') {
+      window.location.href = 'slide-01-intro.html';
+    } else if (e.key === 'End') {
+      window.location.href = 'slide-15-cta.html';
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+})();
+</script>
+<!-- NAV:END -->
+</body>
+</html>

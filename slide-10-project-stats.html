@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Stats - Arbisoft Open Source</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 24px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .content { flex: 1; display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; align-content: start; }
+  .left h2, .right h2 { font-size: 20px; color: #1f2328; margin-bottom: 12px; font-weight: 700; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border-bottom: 1px solid #eaeef2; padding: 8px 10px; text-align: left; }
+  th { background: #f6f8fa; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: #656d76; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.proj { font-weight: 600; }
+  tr:hover { background: #f6f8fa; }
+  .merged { color: #1a7f37; font-weight: 700; }
+  .top { background: #ddf4ff !important; }
+  .top td { border-bottom: 1px solid #b6e3ff; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-num { font-size: 42px; font-weight: 800; color: #0969da; line-height: 1; }
+  .stat-label { font-size: 13px; color: #656d76; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+  .domains { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 20px; }
+  .domain-item { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eaeef2; font-size: 14px; }
+  .domain-item:last-child { border-bottom: none; }
+  .domain-item .name { color: #1f2328; font-weight: 600; }
+  .domain-item .desc { color: #656d76; font-size: 13px; }
+  footer { margin-top: 24px; text-align: center; color: #656d76; font-size: 13px; }
+  .note { font-size: 12px; color: #656d76; margin-top: 6px; font-style: italic; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Project Stats</h1>
+  <div class="sub">Arbisoft Open Source · 26 projects with merged PRs · opensource.arbisoft.com</div>
+</header>
+<div class="content">
+  <div class="left">
+    <h2>Contributions by Project</h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Project</th><th class="num">Contribs</th><th class="num">Merged</th></tr>
+      </thead>
+      <tbody>
+        <tr class="top"><td>1</td><td class="proj">openedx</td><td class="num">255</td><td class="num merged">208</td></tr>
+        <tr class="top"><td>2</td><td class="proj">meilisearch</td><td class="num">19</td><td class="num merged">16</td></tr>
+        <tr class="top"><td>3</td><td class="proj">Pressingly</td><td class="num">16</td><td class="num merged">14</td></tr>
+        <tr class="top"><td>4</td><td class="proj">awais786</td><td class="num">9</td><td class="num merged">4</td></tr>
+        <tr class="top"><td>5</td><td class="proj">wagtail</td><td class="num">8</td><td class="num merged">2</td></tr>
+        <tr><td>6</td><td class="proj">BerriAI</td><td class="num">7</td><td class="num merged">3</td></tr>
+        <tr><td>7</td><td class="proj">arbisoft</td><td class="num">6</td><td class="num merged">6</td></tr>
+        <tr><td>8</td><td class="proj">diesel-rs</td><td class="num">5</td><td class="num merged">5</td></tr>
+        <tr><td>9</td><td class="proj">django-oscar</td><td class="num">5</td><td class="num merged">5</td></tr>
+        <tr><td>10</td><td class="proj">edx</td><td class="num">5</td><td class="num merged">3</td></tr>
+        <tr><td>11</td><td class="proj">mubbsharanwar</td><td class="num">4</td><td class="num merged">2</td></tr>
+        <tr><td>12</td><td class="proj">silverstein</td><td class="num">3</td><td class="num merged">3</td></tr>
+        <tr><td>13</td><td class="proj">nuxt</td><td class="num">2</td><td class="num merged">1</td></tr>
+        <tr><td>14</td><td class="proj">rust-lang</td><td class="num">2</td><td class="num merged">1</td></tr>
+        <tr><td>15</td><td class="proj">overhangio</td><td class="num">2</td><td class="num merged">2</td></tr>
+        <tr><td>16</td><td class="proj">Hadrian-MTV</td><td class="num">2</td><td class="num merged">2</td></tr>
+        <tr><td>17</td><td class="proj">ayarotsky</td><td class="num">2</td><td class="num merged">2</td></tr>
+        <tr><td>18</td><td class="proj">riscv-non-isa</td><td class="num">2</td><td class="num merged">2</td></tr>
+        <tr><td>19</td><td class="proj">edly-io</td><td class="num">2</td><td class="num merged">1</td></tr>
+        <tr><td>20</td><td class="proj">strawberry-graphql · apache · BurntSushi · hactar-is · rwf2 · celery · mitodl</td><td class="num">1 each</td><td class="num merged">1 each</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Projects with 0 merged PRs excluded</div>
+  </div>
+  <div class="right">
+    <h2>At a Glance</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-num">26</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">308</div>
+        <div class="stat-label">Contributions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">246</div>
+        <div class="stat-label">Merged</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">80%</div>
+        <div class="stat-label">Merge rate</div>
+      </div>
+    </div>
+    <h2>Domains</h2>
+    <div class="domains">
+      <div class="domain-item"><span class="name">EdTech</span><span class="desc">openedx, edx, edly, overhangio, mitodl</span></div>
+      <div class="domain-item"><span class="name">Search</span><span class="desc">meilisearch</span></div>
+      <div class="domain-item"><span class="name">CMS</span><span class="desc">wagtail</span></div>
+      <div class="domain-item"><span class="name">LLM</span><span class="desc">BerriAI/litellm</span></div>
+      <div class="domain-item"><span class="name">Auth/SSO</span><span class="desc">Pressingly</span></div>
+      <div class="domain-item"><span class="name">Rust</span><span class="desc">diesel-rs, rust-lang, rwf2, BurntSushi, riscv</span></div>
+      <div class="domain-item"><span class="name">E-commerce</span><span class="desc">django-oscar</span></div>
+      <div class="domain-item"><span class="name">JS/Vue</span><span class="desc">nuxt</span></div>
+    </div>
+  </div>
+</div>
+<footer>Source: opensource.arbisoft.com/project</footer>
+<!-- NAV:START -->
+<style>
+  .deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+  .deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+  .deck-nav.prev { left: 18px; }
+  .deck-nav.next { right: 18px; }
+  .deck-nav.disabled { opacity: .15; pointer-events: none; }
+  .deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+  .deck-counter:hover { opacity: 1; }
+  body:hover .deck-nav { opacity: .85; }
+  @media print { .deck-nav, .deck-counter { display: none !important; } }
+</style>
+<a class="deck-nav prev" href="slide-09-team-stats.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-11-transitions.html" title="Next">&#8250;</a>
+<div class="deck-counter">10 / 15</div>
+<script>
+(function() {
+  var prev = 'slide-09-team-stats.html';
+  var next = 'slide-11-transitions.html';
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      if (next) { e.preventDefault(); window.location.href = next; }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (prev) { e.preventDefault(); window.location.href = prev; }
+    } else if (e.key === 'Home') {
+      window.location.href = 'slide-01-intro.html';
+    } else if (e.key === 'End') {
+      window.location.href = 'slide-15-cta.html';
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+})();
+</script>
+<!-- NAV:END -->
+</body>
+</html>

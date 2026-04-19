@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team Stats - Arbisoft Open Source</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 44px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .top-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 32px; }
+  .stat-card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 14px; padding: 24px; text-align: center; }
+  .stat-num { font-size: 56px; font-weight: 800; color: #0969da; line-height: 1; }
+  .stat-label { font-size: 13px; color: #656d76; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; font-weight: 600; }
+  .content { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .section h2 { font-size: 20px; color: #1f2328; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #d1d9e0; font-weight: 700; }
+  .section h2 .tag { float: right; background: #ddf4ff; color: #0969da; font-size: 12px; padding: 3px 10px; border-radius: 10px; font-weight: 600; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid #eaeef2; font-size: 15px; }
+  .row:last-child { border-bottom: none; }
+  .row .who { color: #1f2328; font-weight: 600; }
+  .row .handle { color: #656d76; font-size: 12px; font-family: ui-monospace, SFMono-Regular, monospace; margin-left: 6px; font-weight: 400; }
+  .row .num { color: #1a7f37; font-weight: 800; font-variant-numeric: tabular-nums; font-size: 17px; }
+  .subtotal { display: flex; justify-content: space-between; margin-top: 10px; padding-top: 10px; border-top: 2px solid #d1d9e0; font-size: 14px; color: #656d76; font-weight: 600; }
+  .subtotal .num { color: #0969da; font-size: 16px; font-weight: 800; }
+  footer { margin-top: 28px; text-align: center; color: #656d76; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Team Stats</h1>
+  <div class="sub">Arbisoft Open Source Team · Contributions per developer · opensource.arbisoft.com</div>
+</header>
+
+<div class="top-stats">
+  <div class="stat-card">
+    <div class="stat-num">16</div>
+    <div class="stat-label">Contributors</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">308</div>
+    <div class="stat-label">Contributions</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">26</div>
+    <div class="stat-label">Projects</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">80%</div>
+    <div class="stat-label">Merge rate</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="section">
+    <h2>Current <span class="tag">Full-time</span></h2>
+    <div class="row"><span class="who">Awais Qureshi <span class="handle">@awais786</span></span><span class="num">76</span></div>
+    <div class="row"><span class="who">Jawad Khan <span class="handle">@jawad-khan</span></span><span class="num">36</span></div>
+    <div class="row"><span class="who">Azan Ali <span class="handle">@aznszn</span></span><span class="num">10</span></div>
+    <div class="row"><span class="who">Ali Tariq <span class="handle">@valkrypton</span></span><span class="num">8</span></div>
+    <div class="subtotal"><span>Subtotal (4)</span><span class="num">130</span></div>
+  </div>
+
+  <div class="section">
+    <h2>Part-time <span class="tag">Ongoing</span></h2>
+    <div class="row"><span class="who">Usama Sadiq <span class="handle">@UsamaSadiq</span></span><span class="num">52</span></div>
+    <div class="row"><span class="who">Ahtisham Shahid <span class="handle">@AhtishamShahid</span></span><span class="num">5</span></div>
+    <div class="row"><span class="who">Awais Ansari <span class="handle">@awais-ansari</span></span><span class="num">5</span></div>
+    <div class="subtotal"><span>Subtotal (3)</span><span class="num">62</span></div>
+  </div>
+
+  <div class="section">
+    <h2>Past <span class="tag">Alumni</span></h2>
+    <div class="row"><span class="who">Mubbshar Anwar <span class="handle">@mubbsharanwar</span></span><span class="num">23</span></div>
+    <div class="row"><span class="who">Hunzlah Malik <span class="handle">@hunzlahmalik</span></span><span class="num">20</span></div>
+    <div class="row"><span class="who">Talha Rizwan <span class="handle">@Talha-Rizwan</span></span><span class="num">20</span></div>
+    <div class="row"><span class="who">Ahtesham Quraish <span class="handle">@ahtesham-quraish</span></span><span class="num">15</span></div>
+    <div class="row"><span class="who">Hina Khadim <span class="handle">@hinakhadim</span></span><span class="num">12</span></div>
+    <div class="row"><span class="who">M. Sumair Khokhar <span class="handle">@sumair-arbisoft</span></span><span class="num">11</span></div>
+    <div class="row"><span class="who">Muhammad Farhan <span class="handle">@mfarhan943</span></span><span class="num">10</span></div>
+    <div class="row"><span class="who">musanaeem <span class="handle">@musanaeem</span></span><span class="num">2</span></div>
+    <div class="row"><span class="who">M. Adeel Tajamul <span class="handle">@muhammadadeeltajamul</span></span><span class="num">3</span></div>
+    <div class="subtotal"><span>Subtotal (9)</span><span class="num">116</span></div>
+  </div>
+</div>
+
+<footer>Source: opensource.arbisoft.com/developer?team=python</footer>
+<!-- NAV:START -->
+<style>
+  .deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+  .deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+  .deck-nav.prev { left: 18px; }
+  .deck-nav.next { right: 18px; }
+  .deck-nav.disabled { opacity: .15; pointer-events: none; }
+  .deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+  .deck-counter:hover { opacity: 1; }
+  body:hover .deck-nav { opacity: .85; }
+  @media print { .deck-nav, .deck-counter { display: none !important; } }
+</style>
+<a class="deck-nav prev" href="slide-08-engagements.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-10-project-stats.html" title="Next">&#8250;</a>
+<div class="deck-counter">09 / 15</div>
+<script>
+(function() {
+  var prev = 'slide-08-engagements.html';
+  var next = 'slide-10-project-stats.html';
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      if (next) { e.preventDefault(); window.location.href = next; }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (prev) { e.preventDefault(); window.location.href = prev; }
+    } else if (e.key === 'Home') {
+      window.location.href = 'slide-01-intro.html';
+    } else if (e.key === 'End') {
+      window.location.href = 'slide-15-cta.html';
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+})();
+</script>
+<!-- NAV:END -->
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Past Contributors - Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; flex: 1; align-content: center; }
+  .card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 20px 14px; text-align: center; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-4px); border-color: #0969da; box-shadow: 0 6px 18px rgba(9,105,218,.12); }
+  .card img { width: 150px; height: 188px; object-fit: cover; border-radius: 10px; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+  .name { font-size: 18px; font-weight: 700; margin-top: 14px; color: #1f2328; }
+  .handle { color: #0969da; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 13px; margin-top: 3px; }
+  .period { font-size: 13px; color: #424a53; margin-top: 12px; }
+  footer { margin-top: 28px; text-align: center; color: #656d76; font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Past Contributors</h1>
+  <div class="sub">Arbisoft Open Source Team · Historical impact · opensource.arbisoft.com</div>
+</header>
+<div class="grid">
+  <div class="card">
+    <img src="team/mubbshar-anwar.jpg" alt="Mubbshar Anwar">
+    <div class="name">Mubbshar Anwar</div>
+    <div class="handle">@mubbsharanwar</div>
+  </div>
+  <div class="card">
+    <img src="team/hunzlah-malik.png" alt="Hunzlah Malik">
+    <div class="name">Hunzlah Malik</div>
+    <div class="handle">@hunzlahmalik</div>
+  </div>
+  <div class="card">
+    <img src="team/talha-rizwan.jpg" alt="Talha Rizwan">
+    <div class="name">Talha Rizwan</div>
+    <div class="handle">@Talha-Rizwan</div>
+  </div>
+  <div class="card">
+    <img src="team/ahtesham-quraish.png" alt="Ahtesham Quraish">
+    <div class="name">Ahtesham Quraish</div>
+    <div class="handle">@ahtesham-quraish</div>
+  </div>
+  <div class="card">
+    <img src="team/hina-khadim.jpg" alt="Hina Khadim">
+    <div class="name">Hina Khadim</div>
+    <div class="handle">@hinakhadim</div>
+  </div>
+  <div class="card">
+    <img src="team/sumair-khokhar.jpg" alt="M. Sumair Khokhar">
+    <div class="name">M. Sumair Khokhar</div>
+    <div class="handle">@sumair-arbisoft</div>
+  </div>
+  <div class="card">
+    <img src="team/muhammad-farhan.jpg" alt="Muhammad Farhan">
+    <div class="name">Muhammad Farhan</div>
+    <div class="handle">@mfarhan943</div>
+  </div>
+  <div class="card">
+    <img src="team/musanaeem.png" alt="musanaeem">
+    <div class="name">musanaeem</div>
+    <div class="handle">@musanaeem</div>
+  </div>
+  <div class="card">
+    <img src="team/adeel-tajamul.jpg" alt="M. Adeel Tajamul">
+    <div class="name">M. Adeel Tajamul</div>
+    <div class="handle">@muhammadadeeltajamul</div>
+  </div>
+</div>
+<footer>9 past contributors</footer>
+<!-- NAV:START -->
+<style>
+  .deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+  .deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+  .deck-nav.prev { left: 18px; }
+  .deck-nav.next { right: 18px; }
+  .deck-nav.disabled { opacity: .15; pointer-events: none; }
+  .deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+  .deck-counter:hover { opacity: 1; }
+  body:hover .deck-nav { opacity: .85; }
+  @media print { .deck-nav, .deck-counter { display: none !important; } }
+</style>
+<a class="deck-nav prev" href="slide-05-parttime.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-07-how-we-work.html" title="Next">&#8250;</a>
+<div class="deck-counter">06 / 15</div>
+<script>
+(function() {
+  var prev = 'slide-05-parttime.html';
+  var next = 'slide-07-how-we-work.html';
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      if (next) { e.preventDefault(); window.location.href = next; }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (prev) { e.preventDefault(); window.location.href = prev; }
+    } else if (e.key === 'Home') {
+      window.location.href = 'slide-01-intro.html';
+    } else if (e.key === 'End') {
+      window.location.href = 'slide-15-cta.html';
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+})();
+</script>
+<!-- NAV:END -->
+</body>
+</html>

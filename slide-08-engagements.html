@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Major Engagements - Arbisoft Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .grid { flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: min-content; gap: 18px; align-content: start; }
+  .card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-2px); border-color: #0969da; box-shadow: 0 4px 14px rgba(9,105,218,.1); }
+  .card-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .card-title { font-size: 18px; font-weight: 700; color: #0969da; }
+  .tag { background: #ddf4ff; color: #0969da; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .5px; }
+  .tag.client { background: #dafbe1; color: #1a7f37; }
+  .tag.internal { background: #fff1e5; color: #bc4c00; }
+  .scope { font-size: 13px; color: #656d76; margin-bottom: 10px; font-weight: 600; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: auto; padding-top: 10px; border-top: 1px solid #d1d9e0; }
+  .step { background: #fff; border: 1px solid #d1d9e0; border-radius: 6px; padding: 7px 6px; text-align: center; font-size: 11px; color: #424a53; font-weight: 600; }
+  .step.active { background: #ddf4ff; border-color: #0969da; color: #0969da; }
+  ul.bullets { list-style: none; padding: 0; margin: 0 0 10px 0; }
+  ul.bullets li { padding: 4px 0 4px 16px; position: relative; font-size: 13px; color: #424a53; line-height: 1.45; }
+  ul.bullets li::before { content: "▸"; position: absolute; left: 0; color: #0969da; font-weight: 700; }
+  .highlight { color: #1f2328; font-weight: 600; }
+  .internal-rows { display: flex; flex-direction: column; gap: 8px; }
+  .internal-row { display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 14px; background: #fff; border: 1px solid #d1d9e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+  .internal-row .platform { font-weight: 700; color: #bc4c00; font-size: 13px; }
+  .internal-row .what { color: #424a53; }
+  .internal-row .pill { background: #fff1e5; color: #bc4c00; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; text-transform: uppercase; letter-spacing: .5px; }
+  .tag.ai { background: #fbefff; color: #8250df; }
+  .ai-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+  .ai-step { background: #fbefff; border: 1px solid #e0c4ff; border-radius: 6px; padding: 7px 4px; text-align: center; font-size: 10px; color: #8250df; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; }
+  .ai-step .arr { color: #8250df; font-weight: 400; padding: 0 2px; }
+  .card.highlight-card { background: linear-gradient(135deg, #ddf4ff, #f6f8fa); border: 1px solid #0969da; }
+  .big-number { font-size: 28px; font-weight: 800; color: #1a7f37; line-height: 1; margin-right: 6px; }
+  .projects-strip { margin-top: 20px; background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 14px 20px; }
+  .projects-strip .label { font-size: 10px; color: #656d76; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 10px; }
+  .projects-strip .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .proj { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #d1d9e0; border-radius: 100px; padding: 4px 12px 4px 4px; font-size: 12px; font-weight: 600; color: #1f2328; }
+  .proj .logo { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; letter-spacing: -.5px; }
+  .proj.oss .logo { background: #0969da; }
+  .proj.int .logo { background: #bc4c00; }
+  .proj.client .logo { background: #1a7f37; }
+  .proj.ai .logo { background: #8250df; }
+  footer { margin-top: 14px; text-align: center; color: #656d76; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Major Engagements</h1>
+  <div class="sub">Arbisoft Open Source Team · Platform upgrades &amp; client integrations</div>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Django 5.2 - OpenEdX</div>
+      <span class="tag">Open Source</span>
+    </div>
+    <div class="scope">Community-wide upgrade across the OpenEdX ecosystem</div>
+    <ul class="bullets">
+      <li><span class="highlight">Announcements</span> - upgrade plan circulated across community channels</li>
+      <li><span class="highlight">Ticket creation</span> - discovery &amp; tracking issues opened per repo</li>
+      <li><span class="highlight">Discovery</span> - dependency audit &amp; compatibility matrix</li>
+      <li><span class="highlight">Delivery</span> - PRs merged across 100+ edx-platform repos</li>
+      <li><span class="highlight">API upgrade</span> - 100+ APIs migrated to Django REST Framework (DRF)</li>
+    </ul>
+    <div class="steps">
+      <div class="step active">Announce</div>
+      <div class="step active">Tickets</div>
+      <div class="step active">Discovery</div>
+      <div class="step active">Delivery</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Internal Platform Upgrades</div>
+      <span class="tag internal">Internal</span>
+    </div>
+    <div class="scope">Product platform version bumps</div>
+    <div class="internal-rows">
+      <div class="internal-row">
+        <span class="platform">Hirestream</span>
+        <span class="what">Django upgrade delivered</span>
+        <span class="pill">Django</span>
+      </div>
+      <div class="internal-row">
+        <span class="platform">Workstream</span>
+        <span class="what">Django upgrade delivered</span>
+        <span class="pill">Django</span>
+      </div>
+      <div class="internal-row">
+        <span class="platform">Workstream</span>
+        <span class="what">Odoo version migration</span>
+        <span class="pill">Odoo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Moneta - SSO Integration</div>
+      <span class="tag client">Client · Ongoing</span>
+    </div>
+    <div class="scope">End-to-end SSO delivery with Pressingly mPass - active engagement</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Wagtail Plugins</div>
+      <span class="tag">Open Source</span>
+    </div>
+    <div class="scope">Reusable CMS extensions</div>
+    <ul class="bullets">
+      <li><span class="highlight">Calendar</span> plugin</li>
+      <li><span class="highlight">Image import</span> - wagtail-image-from-url</li>
+      <li><span class="highlight">Wagtail AI Chatbot</span> - AI-powered CMS assistant</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Django Oscar - Permissions</div>
+      <span class="tag">Open Source</span>
+    </div>
+    <div class="scope">Role-based access control contributions</div>
+  </div>
+
+  <div class="card highlight-card">
+    <div class="card-header">
+      <div class="card-title">Apache DevLake - Asana Plugin</div>
+      <span class="tag">Open Source · Apache</span>
+    </div>
+    <div class="scope">Asana plugin + server setup</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">AI Work</div>
+      <span class="tag ai">AI</span>
+    </div>
+    <div class="scope">AI-assisted tooling &amp; automation</div>
+    <ul class="bullets">
+      <li><span class="highlight">Wagtail Chatbot</span> - AI-powered CMS assistant plugin</li>
+      <li><span class="highlight">AI HR Assistant</span> - real-time POD Q&amp;A (headcount, contractors, team stats) · <em>in progress</em></li>
+      <li><span class="highlight">AI Agent</span> - explores open-source issues, evaluates impact, files on Taiga board, ships fixes autonomously</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="projects-strip">
+  <div class="label">Projects &amp; Platforms</div>
+  <div class="row">
+    <span class="proj oss"><span class="logo">OE</span>OpenEdX</span>
+    <span class="proj oss"><span class="logo">W</span>Wagtail</span>
+    <span class="proj oss"><span class="logo">B</span>BerriAI / litellm</span>
+    <span class="proj oss"><span class="logo">LG</span>LangGraph</span>
+    <span class="proj oss"><span class="logo">DS</span>django-simple-history</span>
+    <span class="proj oss"><span class="logo">DO</span>django-oscar</span>
+    <span class="proj oss"><span class="logo">D</span>diesel-rs</span>
+    <span class="proj oss"><span class="logo">A</span>Apache</span>
+    <span class="proj int"><span class="logo">WS</span>Workstream</span>
+    <span class="proj int"><span class="logo">HS</span>Hirestream</span>
+    <span class="proj int"><span class="logo">O</span>Odoo</span>
+    <span class="proj client"><span class="logo">M</span>Moneta</span>
+    <span class="proj client"><span class="logo">P</span>Pressingly / mPass</span>
+    <span class="proj ai"><span class="logo">T</span>Taiga</span>
+  </div>
+</div>
+
+<footer>Open-source contributions · internal platform upgrades · client integrations · AI</footer>
+<!-- NAV:START -->
+<style>
+  .deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+  .deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+  .deck-nav.prev { left: 18px; }
+  .deck-nav.next { right: 18px; }
+  .deck-nav.disabled { opacity: .15; pointer-events: none; }
+  .deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+  .deck-counter:hover { opacity: 1; }
+  body:hover .deck-nav { opacity: .85; }
+  @media print { .deck-nav, .deck-counter { display: none !important; } }
+</style>
+<a class="deck-nav prev" href="slide-07-how-we-work.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-09-team-stats.html" title="Next">&#8250;</a>
+<div class="deck-counter">08 / 15</div>
+<script>
+(function() {
+  var prev = 'slide-07-how-we-work.html';
+  var next = 'slide-09-team-stats.html';
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+      if (next) { e.preventDefault(); window.location.href = next; }
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      if (prev) { e.preventDefault(); window.location.href = prev; }
+    } else if (e.key === 'Home') {
+      window.location.href = 'slide-01-intro.html';
+    } else if (e.key === 'End') {
+      window.location.href = 'slide-15-cta.html';
+    } else if (e.key === 'f' || e.key === 'F') {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    }
+  });
+})();
+</script>
+<!-- NAV:END -->
+</body>
+</html>
