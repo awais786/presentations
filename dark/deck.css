@@ -99,6 +99,34 @@ body {
 }
 .nav-btn.disabled { opacity: .3; pointer-events: none; }
 
+/* Floating presentation nav (fixed to viewport) */
+.deck-nav-float {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59, 130, 246, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  text-decoration: none;
+  transition: background .15s, transform .15s, opacity .2s;
+  opacity: .5;
+  user-select: none;
+}
+.deck-nav-float:hover { background: #3b82f6; opacity: 1; transform: translateY(-50%) scale(1.1); }
+.deck-nav-float.prev { left: 20px; }
+.deck-nav-float.next { right: 20px; }
+.deck-nav-float.disabled { opacity: .15; pointer-events: none; }
+body:hover .deck-nav-float { opacity: .85; }
+@media print { .deck-nav-float { display: none !important; } }
+
 /* === Content primitives === */
 .badge {
   display: inline-flex;
