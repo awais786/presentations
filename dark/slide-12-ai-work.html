@@ -24,6 +24,7 @@
   .ai-title { font-size: 15px; font-weight: 700; color: #f8fafc; line-height: 1.2; }
   .ai-tag { margin-left: auto; font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 8px; background: rgba(74,222,128,0.15); color: #4ade80; text-transform: uppercase; letter-spacing: .5px; }
   .ai-tag.wip { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .ai-tag.disc { background: rgba(96,165,250,0.15); color: #60a5fa; }
   .ai-desc { font-size: 12px; color: #cbd5e1; line-height: 1.5; flex: 1; }
   .ai-desc strong { color: #f8fafc; }
   .footer { top: 660px; }
@@ -65,7 +66,7 @@
         <div class="ai-head">
           <div class="ai-icon"><i class="fas fa-search"></i></div>
           <div class="ai-title">Issue Discovery Agent</div>
-          
+          <span class="ai-tag disc">Discovery</span>
         </div>
         <div class="ai-desc">Scans repos <strong>daily</strong>. LLM validates quality. Posts to <strong>Taiga board</strong>.</div>
       </div>
@@ -74,7 +75,7 @@
         <div class="ai-head">
           <div class="ai-icon"><i class="fas fa-wrench"></i></div>
           <div class="ai-title">Issue Fix Agent</div>
-          
+          <span class="ai-tag disc">Discovery</span>
         </div>
         <div class="ai-desc">Picks validated issues, <strong>ships fixes autonomously</strong>.</div>
       </div>
