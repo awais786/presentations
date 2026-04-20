@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Let's Build Open Source Together - Arbisoft Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: linear-gradient(135deg, #0969da 0%, #218bff 60%, #54aeff 100%); color: #fff; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px; text-align: center; overflow: hidden; position: relative; }
+  body::before { content: ""; position: absolute; top: -120px; right: -120px; width: 520px; height: 520px; border-radius: 50%; background: rgba(255,255,255,.08); pointer-events: none; }
+  body::after { content: ""; position: absolute; bottom: -160px; left: -140px; width: 620px; height: 620px; border-radius: 50%; background: rgba(255,255,255,.06); pointer-events: none; }
+  .badge { display: inline-block; background: rgba(255,255,255,.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.3); color: #fff; padding: 8px 22px; border-radius: 100px; font-size: 14px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 32px; position: relative; z-index: 2; }
+  h1 { font-size: 72px; font-weight: 800; line-height: 1.1; letter-spacing: -2px; position: relative; z-index: 2; max-width: 1100px; }
+  h1 .accent { color: #ddf4ff; }
+  .url-wrap { margin-top: 40px; position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .url-label { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; opacity: .85; font-weight: 700; }
+  .url { background: rgba(255,255,255,.18); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.35); color: #fff; padding: 18px 40px; border-radius: 14px; font-size: 30px; font-weight: 700; font-family: ui-monospace, SFMono-Regular, monospace; text-decoration: none; transition: background .2s, transform .2s; display: inline-block; }
+  .url:hover { background: rgba(255,255,255,.28); transform: translateY(-2px); }
+  .cta-list { position: relative; z-index: 2; margin-top: 40px; display: grid; grid-template-columns: repeat(2, auto); gap: 14px 48px; justify-content: center; font-size: 20px; font-weight: 500; }
+  .cta-item { display: flex; align-items: center; gap: 12px; }
+  .cta-item .dot { width: 8px; height: 8px; border-radius: 50%; background: #ddf4ff; flex-shrink: 0; }
+  .closing { position: relative; z-index: 2; margin-top: 44px; font-size: 24px; font-style: italic; opacity: .95; font-weight: 500; letter-spacing: .3px; }
+  .closing .strong { font-style: normal; font-weight: 700; color: #ddf4ff; }
+  footer { position: absolute; bottom: 36px; left: 60px; right: 60px; display: flex; justify-content: space-between; font-size: 13px; opacity: .7; letter-spacing: 1px; z-index: 2; }
+</style>
+<!-- DECK-HEAD:START -->
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<!-- DECK-HEAD:END -->
+</head>
+<body data-prev="slide-13-vision.html" data-next="slide-15-questions.html" data-first="slide-01-intro.html" data-last="slide-15-questions.html">
+  <div class="badge">Questions &amp; Join Us</div>
+  <h1><span class="accent">Questions?</span> Let's Build Together</h1>
+
+  <div class="url-wrap">
+    <div class="url-label">Start Here</div>
+    <a class="url" href="https://opensource.arbisoft.com/" target="_blank" rel="noopener">opensource.arbisoft.com</a>
+  </div>
+
+  <div class="cta-list">
+    <div class="cta-item"><span class="dot"></span>Explore daily open source work</div>
+    <div class="cta-item"><span class="dot"></span>Pick issues and contribute</div>
+    <div class="cta-item"><span class="dot"></span>Join even part-time</div>
+    <div class="cta-item"><span class="dot"></span>Make real engineering impact</div>
+  </div>
+
+  <div class="closing">
+    <span class="strong">Contribute at your pace.</span> Make an impact at scale.
+  </div>
+
+  <footer>
+    <span>Thank you</span>
+    <span>Arbisoft Open Source Team</span>
+  </footer>
+<!-- NAV:START -->
+<a class="deck-nav prev" href="slide-13-vision.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-15-questions.html" title="Next">&#8250;</a>
+<div class="deck-counter">14 / 15</div>
+<!-- NAV:END -->
+</body>
+</html>
