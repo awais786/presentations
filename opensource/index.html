@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbisoft Open Source Contributions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-light: #1e293b;
+            --primary-blue: #3b82f6;
+            --accent-start: #60a5fa;
+            --accent-end: #a78bfa;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --card-bg: rgba(30, 41, 59, 0.5);
+            --card-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero-stat {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .hero-window {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .stat-band {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Section headers */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-number {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                padding: 40px 16px;
+            }
+
+            .hero-stat {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="hero" id="hero">
+            <!-- Populated by JS -->
+        </div>
+
+        <div id="content">
+            <!-- Populated by JS -->
+        </div>
+
+        <footer style="margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--card-border); color: var(--text-dim); font-size: 0.9rem;">
+            <p style="margin-bottom: 16px;">
+                <strong>Methodology:</strong> Merged PRs authored by 6 team members across public repositories, last 365 days from script run date.
+                Not counted: code reviews, commits outside PRs, private repos, unpublished work.
+            </p>
+            <p>
+                Updated: <span id="updated-date"></span> -
+                <a href="https://github.com/awais786/presentations" style="color: var(--primary-blue);">View source</a>
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Data loaded inline at render time
+        const data = {/* will be populated */};
+
+        async function init() {
+            try {
+                const response = await fetch('contributions.json');
+                const json = await response.json();
+                renderPage(json);
+            } catch (e) {
+                console.error('Failed to load contributions.json:', e);
+                document.getElementById('content').innerHTML = '<p style="color: var(--text-dim);">Error loading data</p>';
+            }
+        }
+
+        function renderPage(data) {
+            renderHero(data);
+            renderTiers(data);
+            renderLedger(data);
+            updateTimestamp(data);
+        }
+
+        function renderHero(data) {
+            const heroEl = document.getElementById('hero');
+            const t = data.totals;
+            const updated = new Date(data.generated);
+
+            heroEl.innerHTML = `
+                <div class="hero-stat">${t.prs} merged pull requests</div>
+                <div class="hero-subtitle">12 months of open source contributions</div>
+                <div class="hero-window">
+                    ${data.window.start} through ${data.window.end}
+                </div>
+                <div class="stat-band">
+                    <div class="stat-item">
+                        <div class="stat-number">${t.prs}</div>
+                        <div class="stat-label">Pull Requests</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${t.repos}</div>
+                        <div class="stat-label">Repositories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${t.orgs}</div>
+                        <div class="stat-label">Organizations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${data.coreContributors.length}</div>
+                        <div class="stat-label">Core Contributors</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTiers(data) {
+            const contentEl = document.getElementById('content');
+            let html = '';
+
+            data.tiers.forEach((tier, idx) => {
+                const num = String(idx + 1).padStart(2, '0');
+                html += `
+                    <section class="section">
+                        <div class="section-number">${num}</div>
+                        <h2 class="section-title">${tier.name}</h2>
+                        <p class="section-description">${tier.description}</p>
+                        <div id="tier-${tier.id}"></div>
+                    </section>
+                `;
+            });
+
+            contentEl.innerHTML = html;
+
+            // Render each tier's content
+            data.tiers.forEach(tier => {
+                const tierEl = document.getElementById(`tier-${tier.id}`);
+                if (tier.id === 'maintain') {
+                    renderMaintainTier(tierEl, data, tier);
+                } else if (tier.id === 'contribute') {
+                    renderContributeTier(tierEl, tier);
+                } else {
+                    renderProjectTier(tierEl, tier);
+                }
+            });
+        }
+
+        function renderMaintainTier(el, data, tier) {
+            // Render core contributors badges first
+            let html = '<div class="core-contributors" style="margin-bottom: 40px;">';
+            html += '<div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Core Contributors</div>';
+
+            data.coreContributors.forEach(cc => {
+                html += `
+                    <div style="display: inline-block; background: var(--card-bg); border: 1px solid var(--card-border); padding: 12px 16px; border-radius: 6px; margin-right: 12px; margin-bottom: 12px; font-size: 0.95rem;">
+                        <strong style="color: var(--primary-blue);">@${cc.handle}</strong>
+                        <span style="color: var(--text-muted);"> - ${cc.role}</span>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            // Then repo grid
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">';
+            tier.repos.forEach(repo => {
+                html += renderProjectCard(repo);
+            });
+            html += '</div>';
+
+            el.innerHTML = html;
+        }
+
+        function renderContributeTier(el, tier) {
+            // Badge wall layout
+            let html = '<div style="display: flex; flex-wrap: wrap; gap: 12px;">';
+            tier.repos.forEach(repo => {
+                const repoName = repo.name.split('/').pop();
+                html += `
+                    <a href="${repo.link}" target="_blank" style="text-decoration: none;">
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 12px 16px; border-radius: 6px; font-size: 0.95rem; transition: all 0.2s; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--primary-blue); font-weight: 600;">${repoName}</span>
+                            <span style="color: var(--text-muted); font-size: 0.85rem;">${repo.prs}</span>
+                            <i class="fas fa-external-link" style="color: var(--text-dim); font-size: 0.8rem;"></i>
+                        </div>
+                    </a>
+                `;
+            });
+            html += '</div>';
+            el.innerHTML = html;
+        }
+
+        function renderProjectTier(el, tier) {
+            // Grid of project cards
+            let html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">';
+            tier.repos.forEach(repo => {
+                html += renderProjectCard(repo);
+            });
+            html += '</div>';
+            el.innerHTML = html;
+        }
+
+        function renderProjectCard(repo) {
+            const name = repo.name.split('/').pop();
+            const org = repo.name.split('/')[0];
+            return `
+                <a href="${repo.link}" target="_blank" style="text-decoration: none;">
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; height: 100%; transition: all 0.2s; cursor: pointer;"
+                         onmouseover="this.style.background='rgba(30, 41, 59, 0.8)'; this.style.borderColor='rgba(255,255,255,0.16)'"
+                         onmouseout="this.style.background='var(--card-bg)'; this.style.borderColor='var(--card-border)'">
+                        <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">${org}</div>
+                        <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 12px; word-break: break-word;">${name}</div>
+                        <div style="color: var(--primary-blue); font-size: 1.4rem; font-weight: 700;">${repo.prs}</div>
+                        <div style="color: var(--text-muted); font-size: 0.85rem;">merged PRs</div>
+                    </div>
+                </a>
+            `;
+        }
+
+        function renderLedger(data) {
+            const contentEl = document.getElementById('content');
+            const footer = contentEl.parentElement.querySelector('footer');
+
+            // Collect all repos
+            const allRepos = [];
+            data.tiers.forEach(tier => {
+                tier.repos.forEach(repo => {
+                    allRepos.push({
+                        name: repo.name,
+                        prs: repo.prs,
+                        tier: tier.name,
+                        link: repo.link,
+                    });
+                });
+            });
+            allRepos.sort((a, b) => b.prs - a.prs);
+
+            let html = `
+                <section class="section" style="margin-top: 60px;">
+                    <div class="section-number">05</div>
+                    <h2 class="section-title">Complete Ledger</h2>
+                    <p class="section-description">All repositories and contribution counts. Click to view on GitHub.</p>
+                    <button onclick="toggleLedger()" style="background: var(--primary-blue); color: var(--text-primary); border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; margin-bottom: 20px;">
+                        Show Full Ledger
+                    </button>
+                    <div id="ledger-table" style="display: none; overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--card-border);">
+                                    <th style="text-align: left; padding: 12px; color: var(--text-secondary);">Repository</th>
+                                    <th style="text-align: center; padding: 12px; color: var(--text-secondary);">PRs</th>
+                                    <th style="text-align: left; padding: 12px; color: var(--text-secondary);">Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${allRepos.map(repo => `
+                                    <tr style="border-bottom: 1px solid var(--card-border);">
+                                        <td style="padding: 12px;"><a href="${repo.link}" target="_blank" style="color: var(--primary-blue); text-decoration: none;">${repo.name} <i class="fas fa-external-link" style="font-size: 0.75rem; opacity: 0.6;"></i></a></td>
+                                        <td style="padding: 12px; text-align: center; color: var(--text-primary); font-weight: 600;">${repo.prs}</td>
+                                        <td style="padding: 12px; color: var(--text-muted);">${repo.tier}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            `;
+
+            footer.insertAdjacentHTML('beforebegin', html);
+        }
+
+        function toggleLedger() {
+            const table = document.getElementById('ledger-table');
+            table.style.display = table.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function updateTimestamp(data) {
+            const updated = new Date(data.generated);
+            document.getElementById('updated-date').textContent = updated.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone: 'UTC',
+            }) + ' UTC';
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>
