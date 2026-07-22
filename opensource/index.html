@@ -396,7 +396,7 @@
             // Then repo grid
             html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">';
             tier.repos.forEach(repo => {
-                html += renderProjectCard(repo);
+                html += renderProjectCard(repo, false);
             });
             html += '</div>';
 
@@ -426,22 +426,52 @@
             // Grid of project cards
             let html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">';
             tier.repos.forEach(repo => {
-                html += renderProjectCard(repo);
+                html += renderProjectCard(repo, tier.id === 'build-with');
             });
             html += '</div>';
             el.innerHTML = html;
         }
 
-        function renderProjectCard(repo) {
+        function getProjectIcon(repoName) {
+            const icons = {
+                'plane': '✈️',
+                'twenty': '20️',
+                'penpot': '🎨',
+                'outline': '📝',
+                'surfsense': '🌊',
+                'plane-mcp-server': '✈️',
+                'twenty-mcp-server': '20️',
+                'outline-mcp-server': '📝',
+                'surfsense-mcp-server': '🌊',
+                'foss-sso-e2e': '🔐',
+                'generative-ai-vdos': '🤖',
+                'moneta-devstack-e2e-tests': '✅',
+                'policy-chatbot': '💬',
+                'wagtail-ai-chat': '💬',
+                'hr-assistant': '👔',
+            };
+            const normalizedName = repoName.toLowerCase().replace('_', '-');
+            for (const [key, icon] of Object.entries(icons)) {
+                if (normalizedName.includes(key)) {
+                    return icon;
+                }
+            }
+            return '📦';
+        }
+
+        function renderProjectCard(repo, isBuildWith = false) {
             const name = repo.name.split('/').pop();
             const org = repo.name.split('/')[0];
+            const icon = isBuildWith ? getProjectIcon(name) : '';
+            const iconHtml = icon ? `<div style="font-size: 2.4rem; margin-bottom: 12px; line-height: 1;">${icon}</div>` : '';
             return `
                 <a href="${repo.link}" target="_blank" style="text-decoration: none;">
-                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; height: 100%; transition: all 0.2s; cursor: pointer;"
+                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); padding: 20px; border-radius: 8px; height: 100%; transition: all 0.2s; cursor: pointer; display: flex; flex-direction: column;"
                          onmouseover="this.style.background='rgba(30, 41, 59, 0.8)'; this.style.borderColor='rgba(255,255,255,0.16)'"
                          onmouseout="this.style.background='var(--card-bg)'; this.style.borderColor='var(--card-border)'">
+                        ${iconHtml}
                         <div style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px;">${org}</div>
-                        <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 12px; word-break: break-word;">${name}</div>
+                        <div style="color: var(--text-primary); font-weight: 600; margin-bottom: 12px; word-break: break-word; flex-grow: 1;">${name}</div>
                         <div style="color: var(--primary-blue); font-size: 1.4rem; font-weight: 700;">${repo.prs}</div>
                         <div style="color: var(--text-muted); font-size: 0.85rem;">merged PRs</div>
                     </div>
