@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-22T10:56:06.914952Z",
+  "generated": "2026-07-22T11:06:11.339452Z",
   "window": {
     "start": "2025-07-22",
     "end": "2026-07-22"
   },
   "totals": {
-    "prs": 450,
-    "repos": 74,
-    "orgs": 20
+    "prs": 448,
+    "repos": 72,
+    "orgs": 19
   },
   "coreContributors": [
     {
@@ -369,7 +369,7 @@
           "name": "Pressingly/presenton",
           "prs": 3,
           "link": "https://github.com/Pressingly/presenton",
-          "fork": false
+          "fork": true
         },
         {
           "name": "Pressingly/askii-python",
@@ -381,7 +381,7 @@
           "name": "Pressingly/open-notebook",
           "prs": 1,
           "link": "https://github.com/Pressingly/open-notebook",
-          "fork": false
+          "fork": true
         }
       ]
     },
@@ -424,7 +424,7 @@
           "name": "arbisoft/incubator-devlake-deprecated",
           "prs": 6,
           "link": "https://github.com/arbisoft/incubator-devlake-deprecated",
-          "fork": false
+          "fork": true
         },
         {
           "name": "valkrypton/hr_assistant",
@@ -469,12 +469,6 @@
           "fork": false
         },
         {
-          "name": "awais786/bakerydemo",
-          "prs": 1,
-          "link": "https://github.com/awais786/bakerydemo",
-          "fork": false
-        },
-        {
           "name": "awais786/meilisearch-python",
           "prs": 1,
           "link": "https://github.com/awais786/meilisearch-python",
@@ -484,12 +478,6 @@
           "name": "awais786/twenty",
           "prs": 1,
           "link": "https://github.com/awais786/twenty",
-          "fork": false
-        },
-        {
-          "name": "jawad-khan/meilisearch-python",
-          "prs": 1,
-          "link": "https://github.com/jawad-khan/meilisearch-python",
           "fork": false
         }
       ]
