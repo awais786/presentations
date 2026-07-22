@@ -211,6 +211,91 @@ def aggregate_by_repo(prs):
 
     return result, list(unclassified)
 
+def generate_json_output(repos, unclassified, since, until):
+    """
+    Generate the contributions.json structure.
+    Groups repos by tier.
+    """
+    # Group by tier
+    tiers_data = {
+        "maintain": {"name": "We Maintain", "repos": []},
+        "contribute": {"name": "We Contribute", "repos": []},
+        "build-with": {"name": "We Build With", "repos": []},
+        "release": {"name": "We Release", "repos": []},
+    }
+
+    for org_repo in sorted(repos.keys()):
+        info = repos[org_repo]
+        tier = info["tier"]
+
+        if tier is None:
+            continue
+
+        # Normalize repo name for display
+        display_name = org_repo
+        repo_link = f"https://github.com/{org_repo}"
+
+        repo_entry = {
+            "name": display_name,
+            "prs": info["count"],
+            "link": repo_link,
+            "fork": info["fork"],
+        }
+
+        tiers_data[tier]["repos"].append(repo_entry)
+
+    # Sort repos within each tier by PR count
+    for tier_info in tiers_data.values():
+        tier_info["repos"].sort(key=lambda x: -x["prs"])
+
+    # Calculate totals
+    total_prs = sum(r["count"] for r in repos.values())
+    total_repos = len([r for r in repos.values() if r["tier"] is not None])
+    total_orgs = len(set(r.split("/")[0] for r in repos.keys() if repos[r]["tier"] is not None))
+
+    output = {
+        "generated": datetime.utcnow().isoformat() + "Z",
+        "window": {
+            "start": since,
+            "end": until,
+        },
+        "totals": {
+            "prs": total_prs,
+            "repos": total_repos,
+            "orgs": total_orgs,
+        },
+        "coreContributors": CORE_CONTRIBUTORS,
+        "tiers": [
+            {
+                "id": "maintain",
+                "name": tiers_data["maintain"]["name"],
+                "description": "Open source projects we actively maintain and contribute to core development.",
+                "repos": tiers_data["maintain"]["repos"],
+            },
+            {
+                "id": "contribute",
+                "name": tiers_data["contribute"]["name"],
+                "description": "Upstream open source projects where we've contributed patches and improvements.",
+                "repos": tiers_data["contribute"]["repos"],
+            },
+            {
+                "id": "build-with",
+                "name": tiers_data["build-with"]["name"],
+                "description": "Open source products we integrate with and extend through client work.",
+                "repos": tiers_data["build-with"]["repos"],
+            },
+            {
+                "id": "release",
+                "name": tiers_data["release"]["name"],
+                "description": "Open source tools and libraries we've released to the community.",
+                "repos": tiers_data["release"]["repos"],
+            },
+        ],
+        "unclassified": unclassified,
+    }
+
+    return output
+
 def main():
     print("Refreshing open source contributions data...")
     prs, since, until = get_all_merged_prs()
@@ -226,13 +311,23 @@ def main():
         for org in sorted(unclassified):
             print(f"  - {org}")
 
-    print(f"\nTotal repos: {len(repos)}")
-    print(f"Total PRs: {sum(r['count'] for r in repos.values())}")
+    total_counted = sum(1 for r in repos.values() if r["tier"] is not None)
+    print(f"\nTotal repos (classified): {total_counted}")
+    print(f"Total PRs: {sum(r['count'] for r in repos.values() if r['tier'] is not None)}")
 
-    # Print top repos
-    print("\nTop 10 repos:")
-    for org_repo, info in sorted(repos.items(), key=lambda x: -x[1]["count"])[:10]:
-        print(f"  {org_repo}: {info['count']} PRs (tier: {info['tier']})")
+    # Generate and write JSON
+    output = generate_json_output(repos, unclassified, since, until)
+
+    import os
+    os.makedirs("opensource", exist_ok=True)
+
+    with open("opensource/contributions.json", "w") as f:
+        json.dump(output, f, indent=2)
+
+    print(f"\n✓ Wrote opensource/contributions.json")
+    print(f"  PRs: {output['totals']['prs']}")
+    print(f"  Repos: {output['totals']['repos']}")
+    print(f"  Orgs: {output['totals']['orgs']}")
 
 if __name__ == "__main__":
     main()

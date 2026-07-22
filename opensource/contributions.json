@@ -1,0 +1,499 @@
+{
+  "generated": "2026-07-22T10:56:06.914952Z",
+  "window": {
+    "start": "2025-07-22",
+    "end": "2026-07-22"
+  },
+  "totals": {
+    "prs": 450,
+    "repos": 74,
+    "orgs": 20
+  },
+  "coreContributors": [
+    {
+      "handle": "awais786",
+      "project": "openedx",
+      "role": "Core Contributor"
+    },
+    {
+      "handle": "usamasadiq",
+      "project": "openedx",
+      "role": "Core Contributor"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "maintain",
+      "name": "We Maintain",
+      "description": "Open source projects we actively maintain and contribute to core development.",
+      "repos": [
+        {
+          "name": "openedx/openedx-platform",
+          "prs": 49,
+          "link": "https://github.com/openedx/openedx-platform",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-repo-health",
+          "prs": 12,
+          "link": "https://github.com/openedx/edx-repo-health",
+          "fork": false
+        },
+        {
+          "name": "openedx/.github",
+          "prs": 7,
+          "link": "https://github.com/openedx/.github",
+          "fork": false
+        },
+        {
+          "name": "openedx/tutor-contrib-platform-notifications",
+          "prs": 6,
+          "link": "https://github.com/openedx/tutor-contrib-platform-notifications",
+          "fork": false
+        },
+        {
+          "name": "openedx/repo-tools",
+          "prs": 5,
+          "link": "https://github.com/openedx/repo-tools",
+          "fork": false
+        },
+        {
+          "name": "openedx/wg-maintenance",
+          "prs": 5,
+          "link": "https://github.com/openedx/wg-maintenance",
+          "fork": false
+        },
+        {
+          "name": "openedx/course-discovery",
+          "prs": 3,
+          "link": "https://github.com/openedx/course-discovery",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-submissions",
+          "prs": 3,
+          "link": "https://github.com/openedx/edx-submissions",
+          "fork": false
+        },
+        {
+          "name": "edx/edx-filters-pipelines",
+          "prs": 2,
+          "link": "https://github.com/edx/edx-filters-pipelines",
+          "fork": false
+        },
+        {
+          "name": "openedx/credentials",
+          "prs": 2,
+          "link": "https://github.com/openedx/credentials",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-enterprise",
+          "prs": 2,
+          "link": "https://github.com/openedx/edx-enterprise",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-lint",
+          "prs": 2,
+          "link": "https://github.com/openedx/edx-lint",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-notes-api",
+          "prs": 2,
+          "link": "https://github.com/openedx/edx-notes-api",
+          "fork": false
+        },
+        {
+          "name": "edx/.github",
+          "prs": 1,
+          "link": "https://github.com/edx/.github",
+          "fork": false
+        },
+        {
+          "name": "edx/configuration",
+          "prs": 1,
+          "link": "https://github.com/edx/configuration",
+          "fork": false
+        },
+        {
+          "name": "edx/edx-name-affirmation",
+          "prs": 1,
+          "link": "https://github.com/edx/edx-name-affirmation",
+          "fork": false
+        },
+        {
+          "name": "openedx/code-annotations",
+          "prs": 1,
+          "link": "https://github.com/openedx/code-annotations",
+          "fork": false
+        },
+        {
+          "name": "openedx/django-user-tasks",
+          "prs": 1,
+          "link": "https://github.com/openedx/django-user-tasks",
+          "fork": false
+        },
+        {
+          "name": "openedx/docs.openedx.org",
+          "prs": 1,
+          "link": "https://github.com/openedx/docs.openedx.org",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-ace",
+          "prs": 1,
+          "link": "https://github.com/openedx/edx-ace",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-cookiecutters",
+          "prs": 1,
+          "link": "https://github.com/openedx/edx-cookiecutters",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-ora2",
+          "prs": 1,
+          "link": "https://github.com/openedx/edx-ora2",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-organizations",
+          "prs": 1,
+          "link": "https://github.com/openedx/edx-organizations",
+          "fork": false
+        },
+        {
+          "name": "openedx/edx-rest-api-client",
+          "prs": 1,
+          "link": "https://github.com/openedx/edx-rest-api-client",
+          "fork": false
+        },
+        {
+          "name": "openedx/forum",
+          "prs": 1,
+          "link": "https://github.com/openedx/forum",
+          "fork": false
+        },
+        {
+          "name": "openedx/frontend-app-discussions",
+          "prs": 1,
+          "link": "https://github.com/openedx/frontend-app-discussions",
+          "fork": false
+        },
+        {
+          "name": "openedx/license-manager",
+          "prs": 1,
+          "link": "https://github.com/openedx/license-manager",
+          "fork": false
+        },
+        {
+          "name": "openedx/openedx-ai-extensions",
+          "prs": 1,
+          "link": "https://github.com/openedx/openedx-ai-extensions",
+          "fork": false
+        },
+        {
+          "name": "openedx/openedx-aspects",
+          "prs": 1,
+          "link": "https://github.com/openedx/openedx-aspects",
+          "fork": false
+        },
+        {
+          "name": "openedx/openedx-webhooks",
+          "prs": 1,
+          "link": "https://github.com/openedx/openedx-webhooks",
+          "fork": false
+        },
+        {
+          "name": "openedx/openedx-wordpress-ecommerce",
+          "prs": 1,
+          "link": "https://github.com/openedx/openedx-wordpress-ecommerce",
+          "fork": false
+        },
+        {
+          "name": "openedx/pytest-repo-health",
+          "prs": 1,
+          "link": "https://github.com/openedx/pytest-repo-health",
+          "fork": false
+        },
+        {
+          "name": "openedx/xqueue",
+          "prs": 1,
+          "link": "https://github.com/openedx/xqueue",
+          "fork": false
+        }
+      ]
+    },
+    {
+      "id": "contribute",
+      "name": "We Contribute",
+      "description": "Upstream open source projects where we've contributed patches and improvements.",
+      "repos": [
+        {
+          "name": "meilisearch/meilisearch-python",
+          "prs": 14,
+          "link": "https://github.com/meilisearch/meilisearch-python",
+          "fork": false
+        },
+        {
+          "name": "BerriAI/litellm",
+          "prs": 3,
+          "link": "https://github.com/BerriAI/litellm",
+          "fork": false
+        },
+        {
+          "name": "BurntSushi/jiff",
+          "prs": 1,
+          "link": "https://github.com/BurntSushi/jiff",
+          "fork": false
+        },
+        {
+          "name": "apache/devlake",
+          "prs": 1,
+          "link": "https://github.com/apache/devlake",
+          "fork": false
+        },
+        {
+          "name": "celery/django-celery-results",
+          "prs": 1,
+          "link": "https://github.com/celery/django-celery-results",
+          "fork": false
+        },
+        {
+          "name": "hactar-is/wagtail-meilisearch",
+          "prs": 1,
+          "link": "https://github.com/hactar-is/wagtail-meilisearch",
+          "fork": false
+        },
+        {
+          "name": "meilisearch/meilisearch-js",
+          "prs": 1,
+          "link": "https://github.com/meilisearch/meilisearch-js",
+          "fork": false
+        },
+        {
+          "name": "meilisearch/meilisearch-rust",
+          "prs": 1,
+          "link": "https://github.com/meilisearch/meilisearch-rust",
+          "fork": false
+        },
+        {
+          "name": "overhangio/openedx-release-demo",
+          "prs": 1,
+          "link": "https://github.com/overhangio/openedx-release-demo",
+          "fork": false
+        },
+        {
+          "name": "riscv-non-isa/riscv-rvv-intrinsic-doc",
+          "prs": 1,
+          "link": "https://github.com/riscv-non-isa/riscv-rvv-intrinsic-doc",
+          "fork": false
+        },
+        {
+          "name": "rust-lang/rustfmt",
+          "prs": 1,
+          "link": "https://github.com/rust-lang/rustfmt",
+          "fork": false
+        },
+        {
+          "name": "wagtail/wagtail",
+          "prs": 1,
+          "link": "https://github.com/wagtail/wagtail",
+          "fork": false
+        }
+      ]
+    },
+    {
+      "id": "build-with",
+      "name": "We Build With",
+      "description": "Open source products we integrate with and extend through client work.",
+      "repos": [
+        {
+          "name": "Pressingly/foss-sso-e2e",
+          "prs": 45,
+          "link": "https://github.com/Pressingly/foss-sso-e2e",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/plane",
+          "prs": 24,
+          "link": "https://github.com/Pressingly/plane",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/SurfSense",
+          "prs": 22,
+          "link": "https://github.com/Pressingly/SurfSense",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/penpot",
+          "prs": 22,
+          "link": "https://github.com/Pressingly/penpot",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/outline",
+          "prs": 20,
+          "link": "https://github.com/Pressingly/outline",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/twenty",
+          "prs": 14,
+          "link": "https://github.com/Pressingly/twenty",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/plane-mcp-server",
+          "prs": 13,
+          "link": "https://github.com/Pressingly/plane-mcp-server",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/surfsense-mcp-server",
+          "prs": 12,
+          "link": "https://github.com/Pressingly/surfsense-mcp-server",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/outline-mcp-server",
+          "prs": 11,
+          "link": "https://github.com/Pressingly/outline-mcp-server",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/presenton",
+          "prs": 3,
+          "link": "https://github.com/Pressingly/presenton",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/askii-python",
+          "prs": 1,
+          "link": "https://github.com/Pressingly/askii-python",
+          "fork": false
+        },
+        {
+          "name": "Pressingly/open-notebook",
+          "prs": 1,
+          "link": "https://github.com/Pressingly/open-notebook",
+          "fork": false
+        }
+      ]
+    },
+    {
+      "id": "release",
+      "name": "We Release",
+      "description": "Open source tools and libraries we've released to the community.",
+      "repos": [
+        {
+          "name": "awais786/moneta_devstack_e2e_tests",
+          "prs": 49,
+          "link": "https://github.com/awais786/moneta_devstack_e2e_tests",
+          "fork": false
+        },
+        {
+          "name": "awais786/generative-ai-vdos",
+          "prs": 14,
+          "link": "https://github.com/awais786/generative-ai-vdos",
+          "fork": false
+        },
+        {
+          "name": "awais786/wagtail-image-from-url",
+          "prs": 9,
+          "link": "https://github.com/awais786/wagtail-image-from-url",
+          "fork": false
+        },
+        {
+          "name": "awais786/policy-chatbot",
+          "prs": 7,
+          "link": "https://github.com/awais786/policy-chatbot",
+          "fork": false
+        },
+        {
+          "name": "awais786/wagtail-ai-chat",
+          "prs": 7,
+          "link": "https://github.com/awais786/wagtail-ai-chat",
+          "fork": false
+        },
+        {
+          "name": "arbisoft/incubator-devlake-deprecated",
+          "prs": 6,
+          "link": "https://github.com/arbisoft/incubator-devlake-deprecated",
+          "fork": false
+        },
+        {
+          "name": "valkrypton/hr_assistant",
+          "prs": 6,
+          "link": "https://github.com/valkrypton/hr_assistant",
+          "fork": false
+        },
+        {
+          "name": "mubbsharanwar/credentials",
+          "prs": 5,
+          "link": "https://github.com/mubbsharanwar/credentials",
+          "fork": false
+        },
+        {
+          "name": "UsamaSadiq/usamasadiq.github.io",
+          "prs": 3,
+          "link": "https://github.com/UsamaSadiq/usamasadiq.github.io",
+          "fork": false
+        },
+        {
+          "name": "awais786/AIAgentReady",
+          "prs": 2,
+          "link": "https://github.com/awais786/AIAgentReady",
+          "fork": false
+        },
+        {
+          "name": "ChashmaGenie/ChashmaGenie",
+          "prs": 1,
+          "link": "https://github.com/ChashmaGenie/ChashmaGenie",
+          "fork": false
+        },
+        {
+          "name": "UsamaSadiq/edx-platform",
+          "prs": 1,
+          "link": "https://github.com/UsamaSadiq/edx-platform",
+          "fork": false
+        },
+        {
+          "name": "arbisoft/surfsense-mcp-server",
+          "prs": 1,
+          "link": "https://github.com/arbisoft/surfsense-mcp-server",
+          "fork": false
+        },
+        {
+          "name": "awais786/bakerydemo",
+          "prs": 1,
+          "link": "https://github.com/awais786/bakerydemo",
+          "fork": false
+        },
+        {
+          "name": "awais786/meilisearch-python",
+          "prs": 1,
+          "link": "https://github.com/awais786/meilisearch-python",
+          "fork": false
+        },
+        {
+          "name": "awais786/twenty",
+          "prs": 1,
+          "link": "https://github.com/awais786/twenty",
+          "fork": false
+        },
+        {
+          "name": "jawad-khan/meilisearch-python",
+          "prs": 1,
+          "link": "https://github.com/jawad-khan/meilisearch-python",
+          "fork": false
+        }
+      ]
+    }
+  ],
+  "unclassified": []
+}
