@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-"""Fix body data-prev/data-next attrs based on sorted filename order, for both light/ and dark/."""
+"""Fix body data-prev/data-next attrs based on sorted filename order.
+
+Defaults to light/ and dark/; pass folders as args for other decks, e.g.
+    ./fix-nav.py q2/dark q2/light
+"""
 import glob
 import os
 import re
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-for folder in ["light", "dark"]:
+for folder in sys.argv[1:] or ["light", "dark"]:
     slides = sorted(glob.glob(os.path.join(HERE, folder, "slide-*.html")))
     total = len(slides)
     first = os.path.basename(slides[0])
@@ -72,6 +77,13 @@ for folder in ["light", "dark"]:
         html = re.sub(
             r'<div class="deck-counter">\d+\s*/\s*\d+</div>',
             f'<div class="deck-counter">{num:02d} / {total:02d}</div>',
+            html
+        )
+
+        # Fix the slide total that follows the page-number span (dark footer)
+        html = re.sub(
+            r'(<span class="page-number">\d+</span>\s*/\s*)\d+',
+            f'\\g<1>{total}',
             html
         )
 
