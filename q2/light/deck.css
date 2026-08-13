@@ -1,0 +1,9 @@
+.deck-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 26px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; transition: background .15s, transform .15s, opacity .2s; opacity: .55; user-select: none; }
+.deck-nav:hover { background: rgba(9,105,218,.95); opacity: 1; transform: translateY(-50%) scale(1.08); }
+.deck-nav.prev { left: 18px; }
+.deck-nav.next { right: 18px; }
+.deck-nav.disabled { opacity: .15; pointer-events: none; }
+.deck-counter { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,.55); backdrop-filter: blur(10px); color: #fff; padding: 6px 16px; border-radius: 100px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; z-index: 9999; letter-spacing: 1px; opacity: .6; transition: opacity .2s; }
+.deck-counter:hover { opacity: 1; }
+body:hover .deck-nav { opacity: .85; }
+@media print { .deck-nav, .deck-counter { display: none !important; } }

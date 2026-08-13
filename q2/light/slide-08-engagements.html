@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Major Engagements - Arbisoft Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .grid { flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: min-content; gap: 18px; align-content: start; }
+  .card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-2px); border-color: #0969da; box-shadow: 0 4px 14px rgba(9,105,218,.1); }
+  .card-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .card-title { font-size: 18px; font-weight: 700; color: #0969da; }
+  .tag { background: #ddf4ff; color: #0969da; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .5px; }
+  .tag.client { background: #dafbe1; color: #1a7f37; }
+  .tag.internal { background: #fff1e5; color: #bc4c00; }
+  .scope { font-size: 13px; color: #656d76; margin-bottom: 10px; font-weight: 600; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: auto; padding-top: 10px; border-top: 1px solid #d1d9e0; }
+  .step { background: #fff; border: 1px solid #d1d9e0; border-radius: 6px; padding: 7px 6px; text-align: center; font-size: 11px; color: #424a53; font-weight: 600; }
+  .step.active { background: #ddf4ff; border-color: #0969da; color: #0969da; }
+  ul.bullets { list-style: none; padding: 0; margin: 0 0 10px 0; }
+  ul.bullets li { padding: 4px 0 4px 16px; position: relative; font-size: 13px; color: #424a53; line-height: 1.45; }
+  ul.bullets li::before { content: "▸"; position: absolute; left: 0; color: #0969da; font-weight: 700; }
+  .highlight { color: #1f2328; font-weight: 600; }
+  .internal-rows { display: flex; flex-direction: column; gap: 8px; }
+  .internal-row { display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 14px; background: #fff; border: 1px solid #d1d9e0; border-radius: 8px; padding: 10px 14px; font-size: 13px; }
+  .internal-row .platform { font-weight: 700; color: #bc4c00; font-size: 13px; }
+  .internal-row .what { color: #424a53; }
+  .internal-row .pill { background: #fff1e5; color: #bc4c00; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; text-transform: uppercase; letter-spacing: .5px; }
+  .tag.ai { background: #fbefff; color: #8250df; }
+  .ai-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+  .ai-step { background: #fbefff; border: 1px solid #e0c4ff; border-radius: 6px; padding: 7px 4px; text-align: center; font-size: 10px; color: #8250df; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; }
+  .ai-step .arr { color: #8250df; font-weight: 400; padding: 0 2px; }
+  .card.highlight-card { background: linear-gradient(135deg, #ddf4ff, #f6f8fa); border: 1px solid #0969da; }
+  .big-number { font-size: 28px; font-weight: 800; color: #1a7f37; line-height: 1; margin-right: 6px; }
+  .q2-stats { display: flex; gap: 18px; margin-bottom: 18px; }
+  .q2-stat { flex: 1; background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 16px 22px; display: flex; align-items: baseline; gap: 14px; }
+  .q2-stat .num { font-size: 44px; font-weight: 800; color: #1a7f37; line-height: 1; }
+  .q2-stat .lbl { font-size: 15px; color: #656d76; line-height: 1.35; }
+  .q2-stat .lbl strong { display: block; color: #1f2328; font-weight: 700; font-size: 17px; }
+  .sso-card { grid-column: span 2; background: linear-gradient(135deg, #ddf4ff, #f6f8fa); border: 2px solid #0969da; border-radius: 12px; padding: 18px 22px; }
+  .sso-top { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+  .sso-title { font-size: 24px; font-weight: 800; color: #0969da; }
+  .sso-desc { font-size: 15px; color: #424a53; line-height: 1.5; margin-bottom: 14px; }
+  .sso-desc strong { color: #1f2328; font-weight: 700; }
+  .sso-targets { display: flex; align-items: center; gap: 10px; }
+  .sso-label { font-size: 10px; color: #656d76; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; white-space: nowrap; }
+  .sso-tile { flex: 1; background: #fff; border: 1px solid #0969da; border-radius: 8px; padding: 10px 8px; text-align: center; font-size: 15px; font-weight: 700; color: #0969da; }
+  .projects-strip { margin-top: 20px; background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 14px 20px; }
+  .projects-strip .label { font-size: 10px; color: #656d76; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 10px; }
+  .projects-strip .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .proj { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #d1d9e0; border-radius: 100px; padding: 4px 12px 4px 4px; font-size: 12px; font-weight: 600; color: #1f2328; }
+  .proj .logo { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; letter-spacing: -.5px; }
+  .proj.oss .logo { background: #0969da; }
+  .proj.int .logo { background: #bc4c00; }
+  .proj.client .logo { background: #1a7f37; }
+  .proj.ai .logo { background: #8250df; }
+  footer { margin-top: 14px; text-align: center; color: #656d76; font-size: 13px; }
+</style>
+<!-- DECK-HEAD:START -->
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<!-- DECK-HEAD:END -->
+</head>
+<body data-prev="slide-07-past.html" data-next="slide-09-team-stats.html" data-first="slide-01-intro.html" data-last="slide-14-questions.html">
+<header>
+  <h1>Major Engagements</h1>
+  <div class="sub">Arbisoft Open Source Team · Q2 centred on SSO - delivered on Moneta, extending across the open source stack</div>
+</header>
+
+<div class="q2-stats">
+  <div class="q2-stat">
+    <span class="num">113</span>
+    <span class="lbl"><strong>PRs merged</strong>in open source</span>
+  </div>
+  <div class="q2-stat">
+    <span class="num">3</span>
+    <span class="lbl"><strong>MCP servers</strong>built for client engagements</span>
+  </div>
+</div>
+
+<div class="grid">
+
+<div class="sso-card">
+    <div class="sso-top">
+      <div class="sso-title">SSO Implementation</div>
+      <span class="tag client">Q2 Focus</span>
+    </div>
+    <div class="sso-desc">End-to-end SSO delivery on <strong>Moneta</strong> with Pressingly mPass - most of Q2. The same integration is now being taken into the open source products we build with.</div>
+    <div class="sso-targets">
+      <span class="sso-label">Rolling out to</span>
+      <span class="sso-tile">Plane</span>
+      <span class="sso-tile">SurfSense</span>
+      <span class="sso-tile">Twenty</span>
+      <span class="sso-tile">Outline</span>
+      <span class="sso-tile">Penpot</span>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="card-header">
+      <div class="card-title">MCP Servers</div>
+      <span class="tag ai">AI</span>
+    </div>
+    <div class="scope">3 MCP servers for client engagements - 2 for Moneta, 1 for Hirestream</div>
+  </div>
+
+  <!-- TODO: confirm product name spelling + what the integration does -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Askii Integration</div>
+      <span class="tag">Open Source</span>
+    </div>
+    <div class="scope">Details to confirm</div>
+  </div>
+
+  <!-- TODO: remaining Q2 engagements ("etc.") -->
+
+</div>
+
+<div class="projects-strip">
+  <div class="label">Projects &amp; Platforms</div>
+  <div class="row">
+    <span class="proj client"><span class="logo">M</span>Moneta</span>
+    <span class="proj client"><span class="logo">P</span>Pressingly / mPass</span>
+    <span class="proj oss"><span class="logo">PL</span>Plane</span>
+    <span class="proj oss"><span class="logo">SS</span>SurfSense</span>
+    <span class="proj oss"><span class="logo">TW</span>Twenty</span>
+    <span class="proj oss"><span class="logo">OL</span>Outline</span>
+    <span class="proj oss"><span class="logo">PP</span>Penpot</span>
+  </div>
+</div>
+
+<footer>Open-source contributions · internal platform upgrades · client integrations · AI</footer>
+<!-- NAV:START -->
+<a class="deck-nav prev" href="slide-07-past.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-09-team-stats.html" title="Next">&#8250;</a>
+<div class="deck-counter">08 / 14</div>
+<!-- NAV:END -->
+</body>
+</html>
