@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Repo Health Dashboard - Open Source Team</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #ffffff; color: #1f2328; min-height: 100vh; display: flex; flex-direction: column; padding: 40px 60px; }
+  header { border-bottom: 3px solid #0969da; padding-bottom: 16px; margin-bottom: 28px; }
+  h1 { font-size: 42px; color: #0969da; }
+  .sub { color: #656d76; font-size: 18px; margin-top: 6px; }
+  .lead { background: #ddf4ff; border: 1px solid #0969da; border-radius: 14px; padding: 20px 26px; font-size: 18px; color: #424a53; line-height: 1.55; max-width: 1300px; margin: 0 auto 28px; width: 100%; }
+  .lead strong { color: #1f2328; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; flex: 1; align-content: center; max-width: 1300px; margin: 0 auto; width: 100%; }
+  .card { background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 16px; padding: 28px 26px; }
+  .card h2 { font-size: 24px; color: #1f2328; margin-bottom: 12px; }
+  .card p { font-size: 16px; color: #424a53; line-height: 1.55; }
+  .card p strong { color: #1f2328; }
+  .sig { list-style: none; margin-top: 14px; }
+  .sig li { font-size: 15px; color: #424a53; padding: 5px 0 5px 18px; position: relative; line-height: 1.45; }
+  .sig li::before { content: ""; position: absolute; left: 0; top: 13px; width: 6px; height: 6px; border-radius: 50%; background: #0969da; }
+  .built { max-width: 1300px; margin: 28px auto 0; width: 100%; background: #f6f8fa; border: 1px solid #d1d9e0; border-radius: 12px; padding: 14px 22px; font-size: 15px; color: #424a53; }
+  .built strong { color: #1f2328; }
+  footer { margin-top: 24px; text-align: center; color: #656d76; font-size: 14px; }
+</style>
+<!-- DECK-HEAD:START -->
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<!-- DECK-HEAD:END -->
+</head>
+<body data-prev="slide-08-moneta-platform.html" data-next="slide-10-community.html" data-first="slide-01-intro.html" data-last="slide-15-questions.html">
+<header>
+  <h1>Open edX Repo Health Dashboard</h1>
+  <div class="sub">Live, public visibility into the health of the Open edX repository fleet · opensource.arbisoft.com</div>
+</header>
+
+<div class="lead">
+  <strong>Live and public.</strong> Used by the Open edX community and core maintainers to see, at a glance, which repositories are healthy and which need attention. Delivered by <strong>Usama Sadiq</strong>.
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>What It Tracks</h2>
+    <p>Health signals collected across the Open edX repo fleet and rendered in one view.</p>
+    <!-- TODO: confirm the exact signal set the dashboard renders -->
+    <ul class="sig">
+      <li>CI and build status</li>
+      <li>Dependency and version freshness</li>
+      <li>Maintenance ownership</li>
+      <li>Test and coverage signals</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Who Uses It</h2>
+    <p>Not an internal tool. It is <strong>community infrastructure</strong> - consumed by maintainers across the Open edX project when deciding where to spend effort.</p>
+    <!-- TODO: name the working group / forum thread where it is referenced -->
+  </div>
+
+  <div class="card">
+    <h2>Why It Matters</h2>
+    <p>Owning a piece of shared community tooling puts Arbisoft in the room where <strong>platform-wide decisions</strong> get made - a standing that pure feature work does not buy.</p>
+  </div>
+</div>
+
+<!-- TODO: confirm upstream repo + public dashboard URL before presenting -->
+<div class="built"><strong>Built on openedx/edx-repo-health</strong> - health checks run on a schedule, results published back to the community.</div>
+
+<footer>Community infrastructure, owned end to end</footer>
+<!-- NAV:START -->
+<a class="deck-nav prev" href="slide-08-moneta-platform.html" title="Previous">&#8249;</a>
+<a class="deck-nav next" href="slide-10-community.html" title="Next">&#8250;</a>
+<div class="deck-counter">09 / 15</div>
+<!-- NAV:END -->
+</body>
+</html>
