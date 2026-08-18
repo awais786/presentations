@@ -10,28 +10,28 @@
 <script src="deck.js" defer></script>
 <style>
   .main-content { position: absolute; top: 110px; left: 60px; width: 1160px; z-index: 10; }
-  .section-title { font-size: 48px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; line-height: 1.1; }
-  .section-subtitle { font-size: 18px; color: #94a3b8; margin-bottom: 24px; }
+  .section-title { font-size: 54px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; line-height: 1.1; }
+  .section-subtitle { font-size: 20px; color: #94a3b8; margin-bottom: 24px; }
   .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .top-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 26px; }
   .top-stat { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 20px; text-align: center; }
-  .top-stat .num { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
-  .top-stat .lbl { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 8px; font-weight: 700; }
+  .top-stat .num { font-size: 40.5px; font-weight: 800; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+  .top-stat .lbl { font-size: 12.5px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 8px; font-weight: 700; }
   .top-stat.q2 { border-color: rgba(96,165,250,0.35); background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.08)); }
   .top-stat.pending .num { background: none; -webkit-text-fill-color: #475569; color: #475569; }
   .row .num.pending { color: #475569; }
   .sections { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; }
   .section-box { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px; }
   .section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .section-head .h2 { font-size: 14px; font-weight: 700; color: #f8fafc; }
-  .section-head .tag { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .5px; background: rgba(59,130,246,0.15); color: #3b82f6; }
-  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 12px; }
+  .section-head .h2 { font-size: 15.5px; font-weight: 700; color: #f8fafc; }
+  .section-head .tag { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .5px; background: rgba(59,130,246,0.15); color: #3b82f6; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 13.5px; }
   .row:last-of-type { border-bottom: none; }
   .row .name { color: #e2e8f0; font-weight: 600; }
-  .row .handle { color: #64748b; font-size: 10px; font-family: 'JetBrains Mono', monospace; margin-left: 4px; font-weight: 400; }
-  .row .num { color: #4ade80; font-weight: 800; font-size: 13px; }
-  .subtotal { display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-  .subtotal .num { color: #3b82f6; font-size: 13px; }
+  .row .handle { color: #64748b; font-size: 11px; font-family: 'JetBrains Mono', monospace; margin-left: 4px; font-weight: 400; }
+  .row .num { color: #4ade80; font-weight: 800; font-size: 14.5px; }
+  .subtotal { display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12.5px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .subtotal .num { color: #3b82f6; font-size: 14.5px; }
   .footer { top: 660px; }
 </style>
 </head>
