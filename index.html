@@ -16,11 +16,10 @@
   .logo-sub { font-size: 14px; color: #94a3b8; }
   h1 { font-size: 52px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 14px; text-align: center; z-index: 2; }
   .sub { font-size: 18px; color: #94a3b8; margin-bottom: 48px; text-align: center; z-index: 2; }
-  .choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 900px; width: 100%; z-index: 2; }
+  .choices { display: grid; grid-template-columns: 1fr; gap: 28px; max-width: 420px; width: 100%; z-index: 2; }
   .choice { background: rgba(30,41,59,0.6); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 36px 32px; text-decoration: none; color: #f8fafc; transition: all .2s; display: flex; flex-direction: column; gap: 16px; }
   .choice:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.5); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
   .choice-icon { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
-  .choice.light .choice-icon { background: linear-gradient(135deg, #fde68a, #fbbf24); color: #78350f; }
   .choice.dark .choice-icon { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; }
   .choice-title { font-size: 24px; font-weight: 800; }
   .choice-desc { font-size: 14px; color: #cbd5e1; line-height: 1.55; }
@@ -39,21 +38,14 @@
   </div>
 
   <h1>Presentation Deck</h1>
-  <p class="sub">Choose a theme to view the 15-slide deck</p>
+  <p class="sub">15-slide Q2 review</p>
 
   <div class="choices">
     <a class="choice dark" href="q2/dark/slide-01-intro.html">
       <div class="choice-icon"><i class="fas fa-moon"></i></div>
-      <div class="choice-title">Dark Theme</div>
+      <div class="choice-title">Open Deck</div>
       <div class="choice-desc">Premium dark design with gradient accents, Font Awesome icons, and modern typography. Matches Genspark design system.</div>
-      <div class="choice-cta">Open Dark <i class="fas fa-arrow-right"></i></div>
-    </a>
-
-    <a class="choice light" href="q2/light/slide-01-intro.html">
-      <div class="choice-icon"><i class="fas fa-sun"></i></div>
-      <div class="choice-title">Light Theme</div>
-      <div class="choice-desc">Clean light design with blue accent palette. Classic presentation style.</div>
-      <div class="choice-cta">Open Light <i class="fas fa-arrow-right"></i></div>
+      <div class="choice-cta">Start Presentation <i class="fas fa-arrow-right"></i></div>
     </a>
   </div>
 

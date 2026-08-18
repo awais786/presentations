@@ -4,22 +4,21 @@ Static HTML slide decks. No build step, no framework. Every slide is a standalon
 
 ## Dark theme only
 
-**Only `q2/dark/` is maintained. Do not edit, check, verify, or build slides in any `light/` directory.**
+**There is no light theme. `q2/light/` and top-level `light/` were deleted - do not recreate them
+and do not build a light variant of a slide unless explicitly asked.** A light theme was tried for
+the Q2 deck; 5 of its 13 slides referenced dark-only classes (`.slide-container`, `.header`,
+`.grid-pattern`, `.footer`) that its own `deck.css` never defined, so it rendered broken and was
+removed rather than fixed.
 
-`q2/light/`, `light/` still exist but are abandoned. Five of the light Q2 slides
-(`03-vision`, `07-moneta-sso`, `08-moneta-platform`, `13-ai-work`, `15-questions`) were copied
-from dark and reference `.slide-container`, `.header`, `.grid-pattern`, `.footer` - none of which
-`q2/light/deck.css` defines, so they render broken. Not worth fixing; the theme is dead.
-
-When asked to change deck content, change the dark slide and stop. Do not mirror to light.
-Do not report light-theme status.
+When asked to change deck content, change the dark slide only.
 
 ## Which deck is live
 
-`q2/` is the current deck - 15 slides, the Q2 leadership review (Apr 1 - Jul 15, 2026).
+`q2/dark/` is the current deck - 15 slides, the Q2 leadership review (Apr 1 - Jul 15, 2026).
 
-Root `index.html` is the landing page and links only into `q2/`. The older top-level `dark/` and
-`light/` decks are still deployed and reachable by direct URL but are unlinked and superseded.
+Root `index.html` is the landing page and links only into `q2/dark/`. The older top-level `dark/`
+deck (pre-Q2, 15 slides) still exists and is deployed and reachable by direct URL, but is unlinked
+and superseded.
 
 `q2/index.html` is a meta-refresh redirect back to root, so `/q2/` does not 404.
 
@@ -58,7 +57,7 @@ Order comes from **sorted filename**, so the `slide-NN-` prefix is the ordering 
 2. Write the new slide(s) using the skeleton above.
 3. `python3 fix-nav.py q2/dark` - rewrites data-attrs, footer hrefs, float-nav hrefs, and all
    counters from filename order. Run it via `python3`; the file is not executable.
-4. Update the slide count in root `index.html` ("Choose a theme to view the NN-slide deck").
+4. Update the slide count in root `index.html` ("NN-slide Q2 review").
 5. Verify no dangling `href="slide-*"` and that counters read `NN / <total>`.
 
 Never hand-edit nav links or counters. `fix-nav.py` owns them and will overwrite.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Fix body data-prev/data-next attrs based on sorted filename order.
 
-Defaults to light/ and dark/; pass folders as args for other decks, e.g.
-    ./fix-nav.py q2/dark q2/light
+Defaults to q2/dark; pass folders as args for other decks, e.g.
+    ./fix-nav.py dark q2/dark
 """
 import glob
 import os
@@ -11,7 +11,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-for folder in sys.argv[1:] or ["light", "dark"]:
+for folder in sys.argv[1:] or ["q2/dark"]:
     slides = sorted(glob.glob(os.path.join(HERE, folder, "slide-*.html")))
     total = len(slides)
     first = os.path.basename(slides[0])
