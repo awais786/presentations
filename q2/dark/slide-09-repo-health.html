@@ -76,12 +76,11 @@
           <div class="work-title">What It Tracks</div>
         </div>
         <div class="work-desc">Health signals collected across the Open edX repo fleet and rendered in one view.</div>
-        <!-- TODO: confirm the exact signal set the dashboard renders -->
         <ul class="sig-list">
-          <li>CI and build status</li>
-          <li>Dependency and version freshness</li>
-          <li>Maintenance ownership</li>
-          <li>Test and coverage signals</li>
+          <li>Dependencies and security alerts</li>
+          <li>Django and Python version support</li>
+          <li>Docs, README, Read the Docs config</li>
+          <li>Ownership and packaging config</li>
         </ul>
       </div>
 
@@ -105,8 +104,8 @@
 
     <div class="beyond">
       <span class="beyond-lbl">Built On</span>
-      <!-- TODO: confirm upstream repo + public dashboard URL before presenting -->
-      <span class="beyond-txt"><strong>openedx/edx-repo-health</strong> - health checks run on a schedule, results published back to the community.</span>
+      <!-- TODO: add the public dashboard URL before presenting -->
+      <span class="beyond-txt"><strong>openedx/edx-repo-health</strong> - pytest-style checks run via the pytest-repo-health plugin, results emitted as YAML and published back to the community.</span>
     </div>
   </div>
 

@@ -3,5 +3,6 @@
 .idea/
 _slide-pngs/
 .venv/
+__pycache__/
 *.pptx
 Screenshot*.png
