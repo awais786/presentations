@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Arbisoft Open Source Team - Slide 12</title>
+<title>Arbisoft Open Source Team - AI Adoption &amp; Contribution</title>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="deck.css">
@@ -32,6 +32,11 @@
   .ash-repo { display: inline-flex; align-items: center; gap: 7px; margin-top: 8px; font-size: 12.5px; font-family: 'JetBrains Mono', monospace; color: #60a5fa; text-decoration: none; }
   .stack-pill { background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.3); color: #60a5fa; font-size: 12.5px; font-weight: 600; padding: 4px 9px; border-radius: 6px; }
   .stack-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .src-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+  .src-lbl { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #64748b; }
+  .src-pill { background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.3); color: #4ade80; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; }
+  .ash-flow { margin-top: 9px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: #cbd5e1; line-height: 1.7; }
+  .ash-flow em { font-style: normal; color: #64748b; padding: 0 3px; }
   .mini-list { list-style: none; padding: 0; margin-top: 8px; }
   .mini-list li { font-size: 13px; color: #cbd5e1; padding: 2px 0 2px 13px; position: relative; line-height: 1.4; }
   .mini-list li::before { content: ""; position: absolute; left: 0; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: #a78bfa; }
@@ -73,7 +78,7 @@
 
   <div class="main-content">
     <div class="badge-ai"><i class="fas fa-robot"></i><span>AI · Q2</span></div>
-    <div class="section-title">Our <span class="highlight">AI Work</span></div>
+    <div class="section-title">Our <span class="highlight">AI Adoption &amp; Contribution</span></div>
     <div class="section-subtitle">What shipped this quarter, and the approaches we are testing next.</div>
 
     <div class="ai-grid">
@@ -81,7 +86,7 @@
         <div class="ai-head">
           <div class="ai-icon"><i class="fas fa-people-group"></i></div>
           <div class="ai-title">ASH - Agentic Software House</div>
-          <span class="ai-tag">Q2 Build</span>
+          <span class="ai-tag wip">In Progress</span>
         </div>
         <div class="ai-desc">A software house with effectively unlimited staff - the staff are agents, the clients are humans. Reusable, <strong>config-driven loop engine</strong>: humans set requirements, integrations, and loop flow, then keep oversight through <strong>feedback gates</strong>.</div>
         <div class="ash-roles">
@@ -94,6 +99,13 @@
           <span class="stack-pill">FastAPI</span>
           <span class="stack-pill">Postgres checkpointer</span>
         </div>
+        <div class="src-row">
+          <span class="src-lbl">Issue sources</span>
+          <span class="src-pill">GitHub</span>
+          <span class="src-pill">Jira</span>
+          <span class="src-pill">Plane</span>
+        </div>
+        <div class="ash-flow">intake <em>&rarr;</em> PM <em>&rarr;</em> review gate <em>&rarr;</em> Research <em>&rarr;</em> Coding <em>&rarr;</em> PR <em>&rarr;</em> Reviewer <em>&rarr;</em> Fixer <em>&rarr;</em> merge</div>
         <a class="ash-repo" href="https://github.com/zahid-arbisoft/ash"><i class="fab fa-github"></i>github.com/zahid-arbisoft/ash</a>
       </div>
 
@@ -105,8 +117,7 @@
         </div>
         <div class="ai-desc"><strong>4 MCP servers</strong> built for client engagements - 3 implemented, the 4th in testing.</div>
         <ul class="mini-list">
-          <li><strong>Moneta</strong> - 2 servers, implemented</li>
-          <!-- TODO: name the 3rd implemented MCP server -->
+          <li><strong>Moneta</strong> - 3 servers, implemented</li>
           <li><strong>Hirestream</strong> - 1 server, in testing</li>
         </ul>
       </div>
@@ -118,28 +129,6 @@
           <span class="ai-tag wip">In Progress</span>
         </div>
         <div class="ai-desc">Building reusable <strong>agent skills</strong> for the community - targeting open source repos and Arbisoft repos.</div>
-      </div>
-
-
-      <div class="group-rule"><span>Where we're headed</span></div>
-
-      <div class="plan-card">
-        <div class="plan-head">
-          <div class="plan-icon"><i class="fas fa-code-pull-request"></i></div>
-          <div class="plan-title">Features, Not Fixes</div>
-          <span class="plan-tag">Direction</span>
-        </div>
-        <div class="plan-desc">Moving effort from issue fixing to <strong>feature work</strong>, especially in <strong>Open edX</strong> and <strong>AI-related repos</strong>.</div>
-      </div>
-
-      <div class="plan-card">
-        <div class="plan-head">
-          <div class="plan-icon"><i class="fas fa-arrow-trend-up"></i></div>
-          <div class="plan-title">Continuous Growth in AI</div>
-          <span class="plan-tag">Ongoing</span>
-        </div>
-        <div class="plan-desc">The team keeps <strong>levelling up on AI</strong> as part of normal delivery - agent workflows, MCP, and AI-assisted review applied on real client and open source work rather than kept as a side track.</div>
-        <!-- TODO: add specifics if wanted - people trained, sessions run, or certifications this quarter -->
       </div>
     </div>
   </div>
