@@ -123,7 +123,9 @@ Deploying and pushing are separate steps; production can run ahead of `origin/ma
 
 ## Content conventions
 
-- **No em-dashes.** Use a hyphen surrounded by spaces. Em-dashes read as AI-generated.
+- **No em-dashes, and no spaced hyphens either.** Both read as AI-generated. Rewrite the sentence:
+  use a full stop, a comma, or a colon, and vary which one so a single substitute does not become
+  the new tell. The deck was swept clean of all 77 spaced hyphens on 2026-08-26.
 - Mark unverified facts with `<!-- TODO: ... -->` rather than inventing specifics. Slides go in
   front of leadership; a plausible-looking wrong number is worse than a visible gap.
 - Numbered cards (01/02/03) over emoji icons.
