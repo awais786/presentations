@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - How Open Source Is Changing</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 22px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 24px 22px 20px; position: relative; display: flex; flex-direction: column; }
+  .card.accent { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
+  .card-n { position: absolute; top: -13px; left: 22px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; font-size: 13.5px; font-weight: 700; padding: 4px 14px; border-radius: 16px; }
+  .card-t { font-size: 19px; font-weight: 700; color: #f8fafc; margin: 6px 0 10px; }
+  .card-d { font-size: 13.5px; color: #cbd5e1; line-height: 1.6; flex: 1; }
+  .card-d strong { color: #f8fafc; }
+  .card-quote { margin-top: 12px; padding: 10px 12px; background: rgba(15,23,42,0.45); border-left: 2px solid rgba(167,139,250,0.55); border-radius: 6px; font-size: 12.5px; color: #cbd5e1; line-height: 1.5; font-style: italic; }
+  .card-src { margin-top: 10px; font-size: 11.5px; color: #64748b; font-family: 'JetBrains Mono', monospace; }
+  .plan-strip { margin-top: 18px; padding: 14px 20px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 14px; }
+  .plan-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
+  .plan-txt { font-size: 13.5px; color: #cbd5e1; line-height: 1.5; }
+  .plan-txt strong { color: #f8fafc; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-16-community.html" data-next="slide-18-project-stats.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">How <span class="highlight">Open Source Is Changing</span></div>
+    <div class="section-subtitle">The ecosystem is moving away from PR counting - and our strategy moved first</div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-n">01</div>
+        <div class="card-t">The Signal: Hacktoberfest Drops PR Counts</div>
+        <div class="card-d">Hacktoberfest 2026 has <strong>abandoned the pull-request-count model</strong> after a decade. AI made low-effort PRs trivial to generate, drowning maintainers. The event is now community sessions built around hands-on building. Our October plan follows suit: <strong>in-house hackathon sessions</strong> instead of PR-count drives.</div>
+        <div class="card-quote">"This year, we're not counting PRs." - DigitalOcean, Hacktoberfest 2026</div>
+        <div class="card-src">hacktoberfest.com</div>
+      </div>
+
+      <div class="card">
+        <div class="card-n">02</div>
+        <div class="card-t">The Argument: Open Source After AI</div>
+        <div class="card-d">Awais Qureshi's Medium article lays out why: when AI makes code cheap, <strong>review becomes the bottleneck</strong>. Popular repos sit on thousands of unread PRs (litellm: 3,000+ open). Adding more PRs to that queue is no longer where value is created - the question moved from "which issue can we fix" to <strong>"where can we create the most value"</strong>.</div>
+        <div class="card-src">medium.com/@awaisq &middot; Open Source After AI &middot; Aug 2026</div>
+      </div>
+
+      <div class="card accent">
+        <div class="card-n">03</div>
+        <div class="card-t">Our Response: Build and Own</div>
+        <div class="card-d">Focus shifted from contributing into projects <strong>managed by someone else</strong> to building open source tools <strong>the company owns</strong>: the MCP servers, mpass-auth-proxy, the SSO layer, the Open edX health dashboard. Real requirements from tools we run ourselves, shipped publicly - broader open source exposure with durable ownership.</div>
+      </div>
+    </div>
+
+    <div class="plan-strip">
+      <span class="plan-lbl">Why It Matters</span>
+      <span class="plan-txt">Owned projects compound: every improvement lands in <strong>our repos, under our name</strong>, reviewable at our pace - instead of waiting in someone else's queue.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">17</span> / 22</span>
+      <a class="nav-btn" href="slide-18-project-stats.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-16-community.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-18-project-stats.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

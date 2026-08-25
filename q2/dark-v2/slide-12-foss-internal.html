@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - FOSS at Arbisoft</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .badge-live { display: inline-flex; align-items: center; gap: 8px; padding: 5px 13px; background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.35); border-radius: 20px; color: #4ade80; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+  .badge-live .dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; }
+  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 20px; }
+  .url-chip { font-family: 'JetBrains Mono', monospace; font-size: 15.5px; font-weight: 600; color: #60a5fa; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); border-radius: 6px; padding: 2px 9px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .swap-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 18px; }
+  .swap { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 12px; text-align: center; }
+  .swap-logo { width: 50px; height: 50px; margin: 0 auto 10px; border-radius: 11px; background: #fff; padding: 6px; object-fit: contain; display: block; }
+  .swap-logo.bleed { background: transparent; padding: 0; }
+  .swap-name { font-size: 16.5px; font-weight: 700; color: #f8fafc; }
+  .swap-for { font-size: 11px; color: #64748b; margin-top: 6px; line-height: 1.4; }
+  .swap-for strong { color: #94a3b8; font-weight: 600; }
+  .why-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 18px; }
+  .why-card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 15px 18px; }
+  .why-t { font-size: 15px; font-weight: 700; color: #f8fafc; margin-bottom: 5px; display: flex; align-items: center; gap: 9px; }
+  .why-t i { color: #60a5fa; font-size: 13.5px; }
+  .why-d { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
+  .why-d strong { color: #f8fafc; }
+  .contact { padding: 14px 20px; background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border: 1px solid rgba(96,165,250,0.35); border-radius: 12px; display: flex; align-items: center; gap: 14px; }
+  .contact-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(96,165,250,0.2); color: #93c5fd; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+  .contact-txt { font-size: 14px; color: #cbd5e1; line-height: 1.5; }
+  .contact-txt strong { color: #f8fafc; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-11-mcp-open.html" data-next="slide-13-jarvis.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="badge-live"><span class="dot"></span><span>LIVE · INTERNAL</span></div>
+    <div class="section-title">FOSS <span class="highlight">@ Arbisoft</span></div>
+    <div class="section-subtitle">The same stack we ship to clients is now live for all members at <span class="url-chip">askii.arbisoft.com</span></div>
+
+    <!-- TODO: confirm the exact product list of the Arbisoft instance before presenting -->
+    <div class="swap-grid">
+      <div class="swap">
+        <img class="swap-logo" src="../assets/plane.png" alt="Plane">
+        <div class="swap-name">Plane</div>
+        <div class="swap-for">instead of <strong>Jira</strong></div>
+      </div>
+      <div class="swap">
+        <img class="swap-logo" src="../assets/outline.png" alt="Outline">
+        <div class="swap-name">Outline</div>
+        <div class="swap-for">instead of <strong>Confluence / Notion</strong></div>
+      </div>
+      <div class="swap">
+        <img class="swap-logo" src="../assets/penpot.png" alt="Penpot">
+        <div class="swap-name">Penpot</div>
+        <div class="swap-for">instead of <strong>Figma</strong></div>
+      </div>
+      <div class="swap">
+        <img class="swap-logo" src="../assets/twenty.png" alt="Twenty">
+        <div class="swap-name">Twenty</div>
+        <div class="swap-for">instead of <strong>Salesforce-class CRM</strong></div>
+      </div>
+      <div class="swap">
+        <img class="swap-logo bleed" src="../assets/surfsense.png" alt="SurfSense">
+        <div class="swap-name">SurfSense</div>
+        <div class="swap-for">instead of <strong>NotebookLM-class research</strong></div>
+      </div>
+    </div>
+
+    <div class="why-row">
+      <div class="why-card">
+        <div class="why-t"><i class="fas fa-seedling"></i>Dogfood What We Ship</div>
+        <div class="why-d">Daily internal use surfaces real issues and feature gaps - every fix flows back into the <strong>same public repos</strong> clients run.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-t"><i class="fas fa-coins"></i>Open Over Enterprise</div>
+        <div class="why-d">Every team that moves a workflow onto the instance is a <strong>license not renewed</strong> - and proof the open source stack holds up at company scale.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-t"><i class="fas fa-user-graduate"></i>Everyone Learns The Stack</div>
+        <div class="why-d">Members using the tools daily become <strong>credible contributors and advocates</strong> - usage is the first step to contribution.</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="contact-icon"><i class="fas fa-headset"></i></div>
+      <div class="contact-txt">Start today at <strong>askii.arbisoft.com</strong> - for questions, access, or onboarding contact <strong>Uzair Hafeez</strong> or reach out to <strong>Team Moneta</strong>.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">12</span> / 22</span>
+      <a class="nav-btn" href="slide-13-jarvis.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-11-mcp-open.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-13-jarvis.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

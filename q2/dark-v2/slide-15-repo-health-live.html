@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Fleet Health Today</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 20px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .kpis { display: flex; gap: 14px; margin-bottom: 18px; }
+  .kpi { flex: 1; background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 18px; text-align: center; }
+  .kpi.accent { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
+  .kpi-n { font-size: 36px; font-weight: 800; line-height: 1.1; color: #f8fafc; }
+  .kpi-n.good { color: #4ade80; }
+  .kpi-n.grad { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .kpi-l { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-top: 5px; }
+  .kpi-d { font-size: 12px; margin-top: 4px; font-weight: 700; }
+  .kpi-d.up { color: #4ade80; }
+  .mix-panel { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 20px; margin-bottom: 18px; }
+  .mix-t { font-size: 15px; font-weight: 700; color: #f8fafc; margin-bottom: 12px; }
+  .mix-bar { display: flex; height: 40px; border-radius: 8px; overflow: hidden; }
+  .mix-seg { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; color: #0f172a; white-space: nowrap; }
+  .mix-seg.a { background: #22c55e; }
+  .mix-seg.b { background: #86efac; }
+  .mix-seg.c { background: #fb923c; }
+  .mix-seg.d { background: #f87171; }
+  .mix-note { font-size: 12px; color: #64748b; margin-top: 8px; }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 20px; }
+  .card-t { font-size: 16px; font-weight: 700; color: #f8fafc; margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+  .card-t i { color: #60a5fa; font-size: 14px; }
+  .card-d { font-size: 13.5px; color: #cbd5e1; line-height: 1.55; }
+  .card-d strong { color: #f8fafc; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-14-repo-health.html" data-next="slide-16-community.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">Fleet Health <span class="highlight">Today</span></div>
+    <div class="section-subtitle">What the dashboard shows leadership and maintainers right now - snapshot 2026-08-25</div>
+
+    <div class="kpis">
+      <div class="kpi accent">
+        <div class="kpi-n grad">71.9 &middot; B</div>
+        <div class="kpi-l">Org Health Score</div>
+        <div class="kpi-d" style="color:#94a3b8;">based on 95% of metric weight</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n good">59</div>
+        <div class="kpi-l">Grade A Repos</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n good">0</div>
+        <div class="kpi-l">Grade F Repos</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n">120</div>
+        <div class="kpi-l">Stale Repos</div>
+        <div class="kpi-d up"><i class="fas fa-arrow-down"></i> 51 fewer than prior snapshot</div>
+      </div>
+    </div>
+
+    <div class="mix-panel">
+      <div class="mix-t">Grade mix across 169 repositories</div>
+      <div class="mix-bar">
+        <div class="mix-seg a" style="width: 34.9%;">A &middot; 59</div>
+        <div class="mix-seg b" style="width: 42.0%;">B &middot; 71</div>
+        <div class="mix-seg c" style="width: 20.1%;">C &middot; 34</div>
+        <div class="mix-seg d" style="width: 3.0%;">5</div>
+      </div>
+      <!-- D count computed: 169 - 59A - 71B - 34C - 0F = 5 -->
+      <div class="mix-note">No repository in the fleet grades F. The tail segment is 5 grade-D repos - each one deep-linkable to its failing checks and remediation snippet.</div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-t"><i class="fas fa-users-gear"></i>Community Infrastructure</div>
+        <div class="card-d">Feeds from the <strong>Open edX Maintenance Working Group</strong> pipeline, and the community has an open governance issue on <strong>dashboard ownership and operation</strong> - shared infrastructure worth formally operating.</div>
+      </div>
+      <div class="card">
+        <div class="card-t"><i class="fas fa-flag"></i>Why It Matters</div>
+        <div class="card-d">Owning shared community tooling puts Arbisoft in the room where <strong>platform-wide decisions</strong> get made - a standing that pure feature work does not buy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">15</span> / 22</span>
+      <a class="nav-btn" href="slide-16-community.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-14-repo-health.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-16-community.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>
