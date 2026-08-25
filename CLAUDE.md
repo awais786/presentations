@@ -14,11 +14,12 @@ When asked to change deck content, change the dark slide only.
 
 ## Which deck is live
 
-`q2/dark/` is the current deck - 15 slides, the Q2 leadership review (Apr 1 - Jul 15, 2026).
+`q2/dark-v2/` is the current deck - 19 slides, the Q2 leadership review (Apr 1 - Jul 15, 2026).
 
-Root `index.html` is the landing page and links only into `q2/dark/`. The older top-level `dark/`
-deck (pre-Q2, 15 slides) still exists and is deployed and reachable by direct URL, but is unlinked
-and superseded.
+Root `index.html` is the landing page and links only into `q2/dark-v2/`. Two older decks are still
+deployed and reachable by direct URL, but are unlinked and superseded: `q2/dark/` (14 slides, the
+previous Q2 deck) and the top-level `dark/` (pre-Q2, 15 slides). Archiving here means unlinking,
+not deleting - URLs already shared keep working.
 
 `q2/index.html` is a meta-refresh redirect back to root, so `/q2/` does not 404.
 
@@ -62,12 +63,48 @@ Order comes from **sorted filename**, so the `slide-NN-` prefix is the ordering 
 
 Never hand-edit nav links or counters. `fix-nav.py` owns them and will overwrite.
 
+## Hiding a slide without deleting it
+
+`fix-nav.py` discovers slides with `glob("slide-*.html")`. To drop a slide from the deck while
+keeping the file, rename it out of that glob **in the same directory** - e.g.
+`slide-04-vision.html` -> `hidden-slide-04-vision.html`. Do not move it into a subdirectory:
+its `deck.css`, `deck.js`, and `../../team/` paths are directory-relative and will break.
+
+A hidden slide keeps its old nav and counter (fix-nav.py no longer manages it) and stays reachable
+by direct URL, so its links can dangle after a renumber. Point them at surviving slides by hand.
+
+## Verifying after any nav or slide change
+
+```bash
+# dangling links
+for f in q2/dark-v2/*.html; do grep -o 'href="slide-[^"]*"' "$f" | sed 's|href="||;s|"||' \
+  | sort -u | while read t; do [ -f "q2/dark-v2/$t" ] || echo "MISSING $t (in $f)"; done; done
+
+# counters: expect 01..NN with no gaps, all against the same total
+grep -h 'page-number' q2/dark-v2/slide-*.html | sed 's/.*page-number">//;s|</span>||' | sort
+```
+
+Slides render on a fixed 1280x720 canvas with no scroll, so **content silently runs under the
+footer instead of erroring**. Character-count estimates are unreliable - one was off by 120px on a
+real slide. Measure the rendered layout instead: serve the repo (`python3 -m http.server 8766`),
+run headless Chrome with `--remote-debugging-port`, and for each slide compare the lowest
+`getBoundingClientRect().bottom` under `.main-content` against the `.footer` top.
+
+Two traps when doing that: Chrome serves cached copies and an edit will appear to change nothing
+(cache-bust the URL with a query string), and a full-bleed `inset: 0` wrapper always measures 720px
+tall, so skip elements taller than ~640px or you get false positives.
+
 ## Deploy
 
 ```bash
-npx vercel deploy --prod --yes
-npx vercel alias set <new-deployment-url> arbisoft-opensource.vercel.app
+npx vercel deploy --prod --yes --scope awais-projects-5072bb05
+npx vercel alias set <new-deployment-url> arbisoft-opensource.vercel.app --scope awais-projects-5072bb05
 ```
+
+**`--scope awais-projects-5072bb05` is required.** Without it the deploy fails with a bare
+`{"status":"error","reason":"deploy_failed","message":"Not authorized"}` even though `vercel whoami`
+succeeds and the project is linked. It is a scope-resolution failure, not an auth failure - do not
+re-login chasing it.
 
 **The alias step is mandatory.** `arbisoft-opensource.vercel.app` is a manually pinned alias, not a
 project production domain. A prod deploy updates `presentations-nine-beta.vercel.app` automatically

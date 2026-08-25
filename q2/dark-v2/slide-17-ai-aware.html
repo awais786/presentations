@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Arbisoft Open Source Team - AI-Aware Codebases</title>
+<title>Arbisoft Open Source Team - This Quarter: AI-Aware Code &amp; Open Source</title>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="deck.css">
@@ -11,29 +11,32 @@
 <style>
   .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
   .badge-ai { display: inline-flex; align-items: center; gap: 8px; padding: 5px 13px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; color: #a78bfa; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
-  .section-title { font-size: 44px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-title { font-size: 42px; font-weight: 800; color: #f8fafc; margin-bottom: 12px; line-height: 1.1; }
   .section-subtitle { font-size: 16.5px; color: #94a3b8; margin-bottom: 26px; max-width: 1050px; line-height: 1.5; }
   .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .journey { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-bottom: 18px; }
-  .stage { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px 24px 22px; position: relative; display: flex; flex-direction: column; }
+  .journey { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px; }
+  .stage { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px 20px 16px; position: relative; display: flex; flex-direction: column; }
   .stage.now { border-color: rgba(74,222,128,0.35); }
   .stage.goal { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
   .stage-n { position: absolute; top: -13px; left: 24px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; font-size: 13.5px; font-weight: 700; padding: 4px 14px; border-radius: 16px; }
   .stage.now .stage-n { background: linear-gradient(135deg, #22c55e, #16a34a); }
   .stage-when { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #4ade80; margin: 4px 0 6px; }
   .stage-when.next { color: #a78bfa; }
-  .stage-t { font-size: 21px; font-weight: 700; color: #f8fafc; margin-bottom: 10px; line-height: 1.2; }
-  .stage-d { font-size: 14px; color: #cbd5e1; line-height: 1.6; flex: 1; }
+  .stage-t { font-size: 19px; font-weight: 700; color: #f8fafc; margin-bottom: 8px; line-height: 1.2; }
+  .stage-d { font-size: 12.5px; color: #cbd5e1; line-height: 1.5; flex: 1; }
   .stage-d strong { color: #f8fafc; }
   .mini-stats { display: flex; gap: 8px; margin-bottom: 12px; }
   .ms { flex: 1; background: rgba(15,23,42,0.5); border: 1px solid rgba(74,222,128,0.2); border-radius: 10px; padding: 9px 6px; text-align: center; }
   .ms-n { font-size: 23px; font-weight: 800; line-height: 1.1; color: #4ade80; }
   .ms-l { font-size: 9.5px; color: #64748b; text-transform: uppercase; letter-spacing: .6px; font-weight: 700; margin-top: 3px; }
   .stage-list { list-style: none; padding: 0; flex: 1; }
-  .stage-list li { font-size: 13px; color: #cbd5e1; padding: 4px 0 4px 15px; position: relative; line-height: 1.5; }
+  .stage-list li { font-size: 12px; color: #cbd5e1; padding: 2px 0 2px 14px; position: relative; line-height: 1.45; }
   .stage-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 4px; height: 4px; border-radius: 50%; background: #4ade80; }
   .stage-list li strong { color: #f8fafc; }
-  .stage-foot { margin-top: 12px; font-size: 12.5px; color: #94a3b8; line-height: 1.5; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07); }
+  .stage-rd { font-size: 13px; font-weight: 700; color: #a78bfa; letter-spacing: .5px; white-space: nowrap; }
+  .ex-lbl { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #64748b; margin-top: 6px; }
+  .eg { font-size: 11px; color: #64748b; font-family: 'JetBrains Mono', monospace; }
+  .stage-foot { margin-top: 9px; font-size: 11.5px; color: #94a3b8; line-height: 1.45; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.07); }
   .stage-foot strong { color: #cbd5e1; }
   .ms.mp { border-color: rgba(139,92,246,0.25); }
   .ms.mp .ms-n { color: #a78bfa; }
@@ -66,37 +69,36 @@
   <div class="main-content">
     <div class="badge-ai"><i class="fas fa-diagram-project"></i><span>CURRENT QUARTER GOALS</span></div>
     <div class="section-title">This Quarter: <span class="highlight">AI-Aware Code</span> &amp; Open Source Exploration</div>
-    <div class="section-subtitle">Most of the industry's code is legacy code that AI agents navigate poorly. We are building the in-house capability to change that - and going deep into open source repos - measured at every step.</div>
 
     <div class="journey">
       <div class="stage goal">
         <div class="stage-n">01</div>
         <div class="stage-when next">This Quarter · R&amp;D</div>
-        <div class="stage-t">The Agent-Ready Repo Playbook</div>
+        <div class="stage-t">The Agent-Ready Repo Playbook <span class="stage-rd">(R&amp;D)</span></div>
+        <div class="ex-lbl" style="margin-top:0;margin-bottom:6px;">Targets this quarter</div>
         <div class="mini-stats">
           <div class="ms mp"><div class="ms-n">2</div><div class="ms-l">Pilot Repos</div></div>
           <div class="ms mp"><div class="ms-n">10</div><div class="ms-l">Real Tasks</div></div>
           <div class="ms mp"><div class="ms-n">3+</div><div class="ms-l">Tools Tested</div></div>
         </div>
-        <div class="stage-d">Define <strong>one reusable playbook</strong> that makes any existing repo agent-ready - context files, conventions, CI guardrails, verification. We benchmark the field beyond <strong>graphify</strong> and <strong>prove it on one repo, before/after</strong>.</div>
-        <div class="stage-foot">After the playbook, an agent already knows:<br><span class="chain">where to look <em>&rarr;</em> how it works <em>&rarr;</em> the rules <em>&rarr;</em> how to test <em>&rarr;</em> when it's done</span></div>
+        <div class="stage-d">Define <strong>one reusable playbook</strong> that makes any repo agent-ready - context files, conventions, CI guardrails, verification. Benchmarked beyond <strong>graphify</strong>, proven on one repo.</div>
+        <div class="stage-foot">An agent then knows:<br><span class="chain">where to look <em>&rarr;</em> the rules <em>&rarr;</em> how to test <em>&rarr;</em> when it's done</span></div>
       </div>
 
       <div class="stage">
         <div class="stage-n">02</div>
         <div class="stage-when next">This Quarter</div>
-        <div class="stage-t">Explore Open Source Repos</div>
-        <div class="stage-d">Hands-on exploration of high-impact open source projects - understanding their internals, mapping where we can contribute, and building expertise the team carries into client work.</div>
-        <div class="stage-foot">Depth over breadth - <strong>a few repos, known well</strong>.</div>
+        <div class="stage-t">Target Open Source Alternatives to Paid Tools</div>
+        <div class="stage-d">Open source that can <strong>replace or reduce</strong> paid tooling - prioritising what we can <strong>self-host, customise, and influence</strong>.</div>
+        <div class="ex-lbl">Focus areas</div>
+        <ul class="stage-list">
+          <li><strong>Enterprise software</strong> - Replace paid tools with self-hosted open source. <span class="eg">e.g. Twenty, Plane</span></li>
+          <li><strong>Emerging technologies</strong> - Contribute early to fast-growing open source areas. <span class="eg">e.g. video generation</span></li>
+          <li><strong>Contribute, don't fork</strong> - Build missing capabilities upstream.</li>
+        </ul>
+        <div class="stage-foot">Quarter outcome: a <strong>repeatable process</strong> from evaluation through to contribution.</div>
       </div>
 
-      <div class="stage">
-        <div class="stage-n">03</div>
-        <div class="stage-when next">This Quarter</div>
-        <div class="stage-t">Contribute &amp; Publish</div>
-        <div class="stage-d">Turn exploration into <strong>upstream pull requests and published tooling</strong> - growing Arbisoft's open source footprint the same build-and-own way that shaped graphify.</div>
-        <div class="stage-foot">Merged PRs and published tools are the <strong>measure</strong>.</div>
-      </div>
     </div>
 
     <div class="risk">
