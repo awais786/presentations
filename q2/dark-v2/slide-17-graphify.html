@@ -35,6 +35,10 @@
   .stage-list li strong { color: #f8fafc; }
   .stage-foot { margin-top: 12px; font-size: 12.5px; color: #94a3b8; line-height: 1.5; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07); }
   .stage-foot strong { color: #cbd5e1; }
+  .ms.mp { border-color: rgba(139,92,246,0.25); }
+  .ms.mp .ms-n { color: #a78bfa; }
+  .chain { display: inline-block; margin-top: 5px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: #a78bfa; line-height: 1.7; }
+  .chain em { font-style: normal; color: #64748b; padding: 0 2px; }
   .risk { padding: 12px 20px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 12px; }
   .risk-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
   .risk-txt { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
@@ -60,41 +64,38 @@
   </div>
 
   <div class="main-content">
-    <div class="badge-ai"><i class="fas fa-diagram-project"></i><span>R&amp;D · NEXT QUARTER GOAL</span></div>
-    <div class="section-title">Making Brownfield Projects <span class="highlight">AI-Aware</span></div>
-    <div class="section-subtitle">Most of the industry's code is legacy code that AI agents navigate poorly. We are building the in-house engineering capability to change that - tool by tool, measured at every step.</div>
+    <div class="badge-ai"><i class="fas fa-diagram-project"></i><span>CURRENT QUARTER GOALS</span></div>
+    <div class="section-title">This Quarter: <span class="highlight">AI-Aware Code</span> &amp; Open Source Exploration</div>
+    <div class="section-subtitle">Most of the industry's code is legacy code that AI agents navigate poorly. We are building the in-house capability to change that - and going deep into open source repos - measured at every step.</div>
 
     <div class="journey">
-      <div class="stage now">
+      <div class="stage goal">
         <div class="stage-n">01</div>
-        <div class="stage-when">Where We Stand</div>
-        <div class="stage-t">One Tool Tried: graphify</div>
+        <div class="stage-when next">This Quarter · R&amp;D</div>
+        <div class="stage-t">The Agent-Ready Repo Playbook</div>
         <div class="mini-stats">
-          <div class="ms"><div class="ms-n">14</div><div class="ms-l">Repos Graphed</div></div>
-          <div class="ms"><div class="ms-n">30x</div><div class="ms-l">Fewer Tokens</div></div>
-          <div class="ms"><div class="ms-n">15+</div><div class="ms-l">AI Tools Served</div></div>
+          <div class="ms mp"><div class="ms-n">2</div><div class="ms-l">Pilot Repos</div></div>
+          <div class="ms mp"><div class="ms-n">10</div><div class="ms-l">Real Tasks</div></div>
+          <div class="ms mp"><div class="ms-n">3+</div><div class="ms-l">Tools Tested</div></div>
         </div>
-        <ul class="stage-list">
-          <li>Codebase knowledge graph - agents <strong>query</strong> instead of reading files</li>
-          <li>Live across the <strong>full Moneta stack</strong>, graphs shared team-wide</li>
-          <li>Answers carry <strong>exact file and line</strong> pointers</li>
-        </ul>
+        <div class="stage-d">Define <strong>one reusable playbook</strong> that makes any existing repo agent-ready - context files, conventions, CI guardrails, verification. We benchmark the field beyond <strong>graphify</strong> and <strong>prove it on one repo, before/after</strong>.</div>
+        <div class="stage-foot">After the playbook, an agent already knows:<br><span class="chain">where to look <em>&rarr;</em> how it works <em>&rarr;</em> the rules <em>&rarr;</em> how to test <em>&rarr;</em> when it's done</span></div>
       </div>
 
       <div class="stage">
         <div class="stage-n">02</div>
-        <div class="stage-when next">Next Quarter</div>
-        <div class="stage-t">Test the Field</div>
-        <div class="stage-d">Benchmark <strong>more graphify-class tools and strategies</strong> on real legacy codebases - the same disciplined way: same tasks, same measurements, side by side. Keep what proves itself, drop what does not.</div>
-        <div class="stage-foot">Candidates span <strong>code graphs, indexes, and context strategies</strong> - measured on our own brownfield projects.</div>
+        <div class="stage-when next">This Quarter</div>
+        <div class="stage-t">Explore Open Source Repos</div>
+        <div class="stage-d">Hands-on exploration of high-impact open source projects - understanding their internals, mapping where we can contribute, and building expertise the team carries into client work.</div>
+        <div class="stage-foot">Depth over breadth - <strong>a few repos, known well</strong>.</div>
       </div>
 
-      <div class="stage goal">
+      <div class="stage">
         <div class="stage-n">03</div>
-        <div class="stage-when next">Where It Lands</div>
-        <div class="stage-t">Build Our Own Solutions</div>
-        <div class="stage-d">Where existing tools fall short, we <strong>build the missing pieces ourselves</strong> and publish them - turning the testing into an in-house playbook any team can apply to make a brownfield project AI-Aware.</div>
-        <div class="stage-foot">Gaps we find become <strong>owned open source solutions</strong> - the same build-and-own strategy that shaped this quarter.</div>
+        <div class="stage-when next">This Quarter</div>
+        <div class="stage-t">Contribute &amp; Publish</div>
+        <div class="stage-d">Turn exploration into <strong>upstream pull requests and published tooling</strong> - growing Arbisoft's open source footprint the same build-and-own way that shaped graphify.</div>
+        <div class="stage-foot">Merged PRs and published tools are the <strong>measure</strong>.</div>
       </div>
     </div>
 
