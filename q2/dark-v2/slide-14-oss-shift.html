@@ -10,21 +10,21 @@
 <script src="deck.js" defer></script>
 <style>
   .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
-  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
-  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 22px; }
+  .section-title { font-size: 46px; font-weight: 800; color: #f8fafc; margin-bottom: 4px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 10px; }
   .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 24px 22px 20px; position: relative; display: flex; flex-direction: column; }
+  .card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px 16px 14px; position: relative; display: flex; flex-direction: column; }
   .card.accent { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
   .card-n { position: absolute; top: -13px; left: 22px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; font-size: 13.5px; font-weight: 700; padding: 4px 14px; border-radius: 16px; }
-  .card-t { font-size: 19px; font-weight: 700; color: #f8fafc; margin: 6px 0 10px; }
-  .card-d { font-size: 13.5px; color: #cbd5e1; line-height: 1.6; flex: 1; }
+  .card-t { font-size: 19px; font-weight: 700; color: #f8fafc; margin: 5px 0 8px; }
+  .card-d { font-size: 14px; color: #cbd5e1; line-height: 1.5; flex: 1; }
   .card-d strong { color: #f8fafc; }
-  .card-quote { margin-top: 12px; padding: 10px 12px; background: rgba(15,23,42,0.45); border-left: 2px solid rgba(167,139,250,0.55); border-radius: 6px; font-size: 12.5px; color: #cbd5e1; line-height: 1.5; font-style: italic; }
-  .card-src { margin-top: 10px; font-size: 11.5px; color: #64748b; font-family: 'JetBrains Mono', monospace; }
-  .plan-strip { margin-top: 18px; padding: 14px 20px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 14px; }
+  .card-quote { margin-top: 12px; padding: 10px 12px; background: rgba(15,23,42,0.45); border-left: 2px solid rgba(167,139,250,0.55); border-radius: 6px; font-size: 12.5px; color: #cbd5e1; line-height: 1.45; font-style: italic; }
+  .card-src { margin-top: 10px; font-size: 12px; color: #64748b; font-family: 'JetBrains Mono', monospace; }
+  .plan-strip { margin-top: 10px; padding: 10px 18px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 14px; }
   .plan-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
-  .plan-txt { font-size: 13.5px; color: #cbd5e1; line-height: 1.5; }
+  .plan-txt { font-size: 14px; color: #cbd5e1; line-height: 1.5; }
   .plan-txt strong { color: #f8fafc; }
   .footer { top: 660px; }
 </style>
@@ -61,10 +61,10 @@
 
       <div class="card">
         <div class="card-n">02</div>
-        <div class="card-t">The Evidence: Review Is the Bottleneck</div>
-        <div class="card-d">AI agents opened <strong>17M pull requests a month</strong> on GitHub by March 2026, up from 4M in September 2025 - and maintainers report roughly <strong>1 in 10 is worth reviewing</strong>. Code got cheap; review did not. The question moved from "which issue can we fix" to <strong>"where can we create the most value"</strong>.</div>
-        <div class="card-quote">curl ended its six-year bug bounty in Jan 2026 as valid reports fell from over 15% to under 5%. Jazzband - 84 Python projects, 3,135 members - sunset in Mar 2026, citing the same flood.</div>
-        <div class="card-src">GitHub &middot; curl &middot; jazzband.co &middot; Sep 2025 - Mar 2026</div>
+        <div class="card-t">The Evidence: Review Effort at Scale</div>
+        <div class="card-d">AI coding agents are moving from assistants to <strong>autonomous contributors</strong>. A 2026 study of <strong>33,707 agent-authored PRs</strong> across 2,807 repositories found <strong>28.3% merge almost instantly</strong> - while the rest enter review cycles where agents stall or are abandoned. The <strong>top 20% absorb disproportionate review effort</strong>, and can be predicted before a human ever looks.</div>
+        <div class="card-quote">Code generation is scaling. Human attention is not. The opportunity is no longer just helping agents write code - it is helping teams <strong>decide what deserves attention, verify it, and know when it is done</strong>.</div>
+        <div class="card-src">arXiv:2601.00753 &middot; MSR 2026 &middot; AIDev dataset</div>
       </div>
 
       <div class="card accent">
