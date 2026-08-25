@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Projects</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 110px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 54px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; line-height: 1.1; }
+  .section-subtitle { font-size: 20px; color: #94a3b8; margin-bottom: 26px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  .dom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .dom { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px 18px; }
+  .dom-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .dom-icon { width: 34px; height: 34px; border-radius: 9px; background: rgba(59,130,246,0.15); color: #60a5fa; display: flex; align-items: center; justify-content: center; font-size: 15.5px; flex-shrink: 0; }
+  .dom-name { font-size: 14.5px; font-weight: 700; color: #f8fafc; text-transform: uppercase; letter-spacing: 1px; }
+  .repo { font-size: 15.5px; color: #e2e8f0; font-family: 'JetBrains Mono', monospace; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .repo:last-child { border-bottom: none; }
+  .repo .org { color: #64748b; font-size: 12.5px; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-17-oss-shift.html" data-next="slide-19-ai-work.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">Projects We <span class="highlight">Contribute To</span></div>
+    <div class="section-subtitle">Where our work landed this quarter, across domains</div>
+
+    <div class="dom-grid">
+      <div class="dom">
+        <div class="dom-head">
+          <div class="dom-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="dom-name">EdTech</div>
+        </div>
+        <div class="repo">openedx</div>
+        <div class="repo">edx</div>
+        <div class="repo">edly</div>
+      </div>
+
+      <div class="dom">
+        <div class="dom-head">
+          <div class="dom-icon"><i class="fas fa-robot"></i></div>
+          <div class="dom-name">LLM / AI</div>
+        </div>
+        <div class="repo">litellm <span class="org">BerriAI</span></div>
+        <div class="repo">LangGraph</div>
+      </div>
+
+      <div class="dom">
+        <div class="dom-head">
+          <div class="dom-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="dom-name">Auth / SSO</div>
+        </div>
+        <div class="repo">Pressingly</div>
+      </div>
+
+      <div class="dom">
+        <div class="dom-head">
+          <div class="dom-icon"><i class="fas fa-users-gear"></i></div>
+          <div class="dom-name">Internal Product</div>
+        </div>
+        <div class="repo">Hirestream</div>
+      </div>
+
+      <div class="dom">
+        <div class="dom-head">
+          <div class="dom-icon"><i class="fas fa-code-branch"></i></div>
+          <div class="dom-name">Internal</div>
+        </div>
+        <div class="repo">arbisoft</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">18</span> / 22</span>
+      <a class="nav-btn" href="slide-19-ai-work.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-17-oss-shift.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-19-ai-work.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

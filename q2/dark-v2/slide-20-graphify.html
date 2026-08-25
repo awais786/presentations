@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - AI-Aware Codebases</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .badge-ai { display: inline-flex; align-items: center; gap: 8px; padding: 5px 13px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; color: #a78bfa; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+  .section-title { font-size: 44px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 16.5px; color: #94a3b8; margin-bottom: 26px; max-width: 1050px; line-height: 1.5; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .journey { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .stage { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px 24px 22px; position: relative; display: flex; flex-direction: column; }
+  .stage.now { border-color: rgba(74,222,128,0.35); }
+  .stage.goal { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
+  .stage-n { position: absolute; top: -13px; left: 24px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; font-size: 13.5px; font-weight: 700; padding: 4px 14px; border-radius: 16px; }
+  .stage.now .stage-n { background: linear-gradient(135deg, #22c55e, #16a34a); }
+  .stage-when { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: #4ade80; margin: 4px 0 6px; }
+  .stage-when.next { color: #a78bfa; }
+  .stage-t { font-size: 21px; font-weight: 700; color: #f8fafc; margin-bottom: 10px; line-height: 1.2; }
+  .stage-d { font-size: 14px; color: #cbd5e1; line-height: 1.6; flex: 1; }
+  .stage-d strong { color: #f8fafc; }
+  .mini-stats { display: flex; gap: 8px; margin-bottom: 12px; }
+  .ms { flex: 1; background: rgba(15,23,42,0.5); border: 1px solid rgba(74,222,128,0.2); border-radius: 10px; padding: 9px 6px; text-align: center; }
+  .ms-n { font-size: 23px; font-weight: 800; line-height: 1.1; color: #4ade80; }
+  .ms-l { font-size: 9.5px; color: #64748b; text-transform: uppercase; letter-spacing: .6px; font-weight: 700; margin-top: 3px; }
+  .stage-list { list-style: none; padding: 0; flex: 1; }
+  .stage-list li { font-size: 13px; color: #cbd5e1; padding: 4px 0 4px 15px; position: relative; line-height: 1.5; }
+  .stage-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 4px; height: 4px; border-radius: 50%; background: #4ade80; }
+  .stage-list li strong { color: #f8fafc; }
+  .stage-foot { margin-top: 12px; font-size: 12.5px; color: #94a3b8; line-height: 1.5; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07); }
+  .stage-foot strong { color: #cbd5e1; }
+  .risk { padding: 12px 20px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 12px; }
+  .risk-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
+  .risk-txt { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
+  .risk-txt strong { color: #f8fafc; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-19-ai-work.html" data-next="slide-21-cta.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="badge-ai"><i class="fas fa-diagram-project"></i><span>R&amp;D · NEXT QUARTER GOAL</span></div>
+    <div class="section-title">Making Brownfield Projects <span class="highlight">AI-Aware</span></div>
+    <div class="section-subtitle">Most of the industry's code is legacy code that AI agents navigate poorly. We are building the in-house engineering capability to change that - tool by tool, measured at every step.</div>
+
+    <div class="journey">
+      <div class="stage now">
+        <div class="stage-n">01</div>
+        <div class="stage-when">Where We Stand</div>
+        <div class="stage-t">One Tool Tried: graphify</div>
+        <div class="mini-stats">
+          <div class="ms"><div class="ms-n">14</div><div class="ms-l">Repos Graphed</div></div>
+          <div class="ms"><div class="ms-n">30x</div><div class="ms-l">Fewer Tokens</div></div>
+          <div class="ms"><div class="ms-n">15+</div><div class="ms-l">AI Tools Served</div></div>
+        </div>
+        <ul class="stage-list">
+          <li>Codebase knowledge graph - agents <strong>query</strong> instead of reading files</li>
+          <li>Live across the <strong>full Moneta stack</strong>, graphs shared team-wide</li>
+          <li>Answers carry <strong>exact file and line</strong> pointers</li>
+        </ul>
+      </div>
+
+      <div class="stage">
+        <div class="stage-n">02</div>
+        <div class="stage-when next">Next Quarter</div>
+        <div class="stage-t">Test the Field</div>
+        <div class="stage-d">Benchmark <strong>more graphify-class tools and strategies</strong> on real legacy codebases - the same disciplined way: same tasks, same measurements, side by side. Keep what proves itself, drop what does not.</div>
+        <div class="stage-foot">Candidates span <strong>code graphs, indexes, and context strategies</strong> - measured on our own brownfield projects.</div>
+      </div>
+
+      <div class="stage goal">
+        <div class="stage-n">03</div>
+        <div class="stage-when next">Where It Lands</div>
+        <div class="stage-t">Build Our Own Solutions</div>
+        <div class="stage-d">Where existing tools fall short, we <strong>build the missing pieces ourselves</strong> and publish them - turning the testing into an in-house playbook any team can apply to make a brownfield project AI-Aware.</div>
+        <div class="stage-foot">Gaps we find become <strong>owned open source solutions</strong> - the same build-and-own strategy that shaped this quarter.</div>
+      </div>
+    </div>
+
+    <div class="risk">
+      <span class="risk-lbl">Eyes Open</span>
+      <span class="risk-txt">Known risks we plan around: <strong>tool maturity varies</strong> and upstream licenses can pivot - we evaluate before we depend.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">20</span> / 22</span>
+      <a class="nav-btn" href="slide-21-cta.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-19-ai-work.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-21-cta.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

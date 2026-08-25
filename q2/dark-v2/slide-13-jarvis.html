@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Jarvis</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .badge-beta { display: inline-flex; align-items: center; gap: 8px; padding: 5px 13px; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.35); border-radius: 20px; color: #fbbf24; font-size: 13px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 24px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 18px; }
+  .card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px 24px 20px; position: relative; display: flex; flex-direction: column; }
+  .card.accent { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
+  .card-n { position: absolute; top: -13px; left: 24px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; font-size: 13.5px; font-weight: 700; padding: 4px 14px; border-radius: 16px; }
+  .card-t { font-size: 20px; font-weight: 700; color: #f8fafc; margin: 4px 0 10px; line-height: 1.2; }
+  .card-d { font-size: 13.5px; color: #cbd5e1; line-height: 1.55; flex: 1; }
+  .card-d strong { color: #f8fafc; }
+  .card-list { list-style: none; padding: 0; margin-top: 8px; }
+  .card-list li { font-size: 13px; color: #cbd5e1; padding: 4px 0 4px 15px; position: relative; line-height: 1.5; }
+  .card-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 4px; height: 4px; border-radius: 50%; background: #60a5fa; }
+  .card-list li strong { color: #f8fafc; }
+  .beta-num { font-size: 34px; font-weight: 800; line-height: 1; color: #4ade80; margin-bottom: 6px; }
+  .beta-num span { font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-left: 6px; }
+  .repo-strip { padding: 13px 20px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 14px; }
+  .repo-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
+  .repo-txt { font-size: 13.5px; color: #cbd5e1; line-height: 1.5; }
+  .repo-txt strong { color: #f8fafc; }
+  .repo-txt code { font-family: 'JetBrains Mono', monospace; color: #60a5fa; font-size: 12.5px; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-12-foss-internal.html" data-next="slide-14-repo-health.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="badge-beta"><i class="fas fa-robot"></i><span>INTERNAL · BETA</span></div>
+    <div class="section-title">Jarvis - <span class="highlight">Automating Routine Workflows</span></div>
+    <div class="section-subtitle">An internal tool that automates the routine filings every employee is required to complete - built by the team, for the whole company</div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-n">01</div>
+        <div class="card-t">What It Automates</div>
+        <div class="card-d">The required routine filings every member completes by hand today:</div>
+        <ul class="card-list">
+          <li><strong>Log filling</strong> - the regular work logs every employee submits, drafted and filed automatically</li>
+          <li><strong>Competency review filing</strong> - the annual review process, with competency data compiled and filed instead of assembled by hand</li>
+          <li>More required processes lined up as the plugin matures</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-n">02</div>
+        <div class="card-t">Beta Tested, Feedback In</div>
+        <div class="beta-num">4-5 <span>Beta Testers</span></div>
+        <div class="card-d">Members ran Jarvis on their real daily workflows. Their feedback is driving the current improvement cycle - fixes and refinements now landing for the <strong>next release</strong>.</div>
+      </div>
+
+      <div class="card accent">
+        <div class="card-n">03</div>
+        <div class="card-t">Available Company-Wide</div>
+        <div class="card-d">Ships as a <strong>Claude plugin</strong> - install it, and the automation runs inside the AI tooling members already use daily. Available internally to everyone at Arbisoft today.</div>
+      </div>
+    </div>
+
+    <div class="repo-strip">
+      <span class="repo-lbl">Get It</span>
+      <span class="repo-txt"><strong>github.com/arbisoft/jarvis</strong> - internal repository with the plugin, setup instructions, and the feedback board for the next release.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">13</span> / 22</span>
+      <a class="nav-btn" href="slide-14-repo-health.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-12-foss-internal.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-14-repo-health.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

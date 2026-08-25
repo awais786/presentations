@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Quarter in Numbers</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 110px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 49.5px; font-weight: 800; color: #f8fafc; margin-bottom: 12px; line-height: 1.1; }
+  .section-subtitle { font-size: 18px; color: #94a3b8; margin-bottom: 28px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .num-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .num-card { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px 26px 22px; }
+  .num-card.accent { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border-color: rgba(96,165,250,0.35); }
+  .num-n { font-size: 52px; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .num-t { font-size: 17px; font-weight: 700; color: #f8fafc; margin-top: 10px; }
+  .num-d { font-size: 13.5px; color: #94a3b8; line-height: 1.5; margin-top: 5px; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-02-overview.html" data-next="slide-04-vision.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">The Quarter <span class="highlight">in Numbers</span></div>
+    <div class="section-subtitle">The whole review in one view - every number is expanded in the slides that follow</div>
+
+    <div class="num-grid">
+      <div class="num-card accent">
+        <div class="num-n">5</div>
+        <div class="num-t">Products, One SSO Flow</div>
+        <div class="num-d">mPass single sign-on across Plane, Outline, Penpot, Twenty, and Zammad - all in public forks</div>
+      </div>
+      <div class="num-card">
+        <div class="num-n">3</div>
+        <div class="num-t">Public MCP Servers</div>
+        <div class="num-d">Plane, Outline, and SurfSense - built for the client, released to the community</div>
+      </div>
+      <div class="num-card">
+        <div class="num-n">100+</div>
+        <div class="num-t">AI Agent Tools</div>
+        <div class="num-d">Exposed through the MCP servers, with curated tool sets to fit model context windows</div>
+      </div>
+      <div class="num-card">
+        <div class="num-n">169</div>
+        <div class="num-t">Open edX Repos Monitored</div>
+        <div class="num-d">Live public health dashboard used by the Open edX community - zero repos grading F</div>
+      </div>
+      <div class="num-card">
+        <div class="num-n">30x</div>
+        <div class="num-t">Fewer AI Tokens</div>
+        <div class="num-d">Graphify codebase graph vs raw file reading, measured on a real comprehension task</div>
+      </div>
+      <div class="num-card">
+        <div class="num-n">140</div>
+        <div class="num-t">Community Threads</div>
+        <div class="num-d">Upstream GitHub issues and PRs commented on this quarter - presence, not just patches</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">03</span> / 22</span>
+      <a class="nav-btn" href="slide-04-vision.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-02-overview.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-04-vision.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>

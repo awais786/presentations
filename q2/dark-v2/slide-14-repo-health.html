@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arbisoft Open Source Team - Repo Health Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+<script src="deck.js" defer></script>
+<style>
+  .main-content { position: absolute; top: 100px; left: 60px; width: 1160px; z-index: 10; }
+  .section-title { font-size: 45px; font-weight: 800; color: #f8fafc; margin-bottom: 6px; line-height: 1.1; }
+  .section-subtitle { font-size: 17px; color: #94a3b8; margin-bottom: 20px; }
+  .highlight { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .split { display: grid; grid-template-columns: 860px 1fr; gap: 20px; align-items: start; }
+  .shot-frame { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 10px; }
+  .shot-frame img { width: 100%; border-radius: 8px; display: block; }
+  .shot-cap { font-size: 12px; color: #64748b; text-align: center; margin-top: 8px; font-family: 'JetBrains Mono', monospace; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
+  .stat { background: rgba(30,41,59,0.5); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 12px; text-align: center; }
+  .stat-n { font-size: 26px; font-weight: 800; line-height: 1.1; background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .stat-l { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: .8px; font-weight: 700; margin-top: 4px; }
+  .info-box { background: linear-gradient(135deg, rgba(59,130,246,0.14), rgba(139,92,246,0.10)); border: 1px solid rgba(96,165,250,0.35); border-radius: 12px; padding: 11px 14px; margin-bottom: 10px; }
+  .info-box.plain { background: rgba(30,41,59,0.5); border-color: rgba(255,255,255,0.08); }
+  .info-t { font-size: 14px; font-weight: 700; color: #f8fafc; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .info-t i { color: #60a5fa; font-size: 12.5px; }
+  .info-d { font-size: 12.5px; color: #cbd5e1; line-height: 1.5; }
+  .info-d strong { color: #f8fafc; }
+  .chain { margin-top: 16px; padding: 12px 18px; background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; display: flex; align-items: center; gap: 12px; }
+  .chain-lbl { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; white-space: nowrap; }
+  .chain-txt { font-size: 13.5px; color: #cbd5e1; }
+  .chain-txt strong { color: #f8fafc; }
+  .footer { top: 660px; }
+</style>
+</head>
+<body data-prev="slide-13-jarvis.html" data-next="slide-15-repo-health-live.html" data-first="slide-01-intro.html" data-last="slide-22-questions.html">
+<div class="slide-container">
+  <div class="grid-pattern"></div>
+  <div class="header">
+    <div class="logo">
+      <img src="logo.svg" alt="Arbisoft" class="logo-mark">
+      <div class="logo-divider"></div>
+      <div class="logo-subtext">Open Source Team</div>
+    </div>
+    <div class="nav-dots">
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot active"></div>
+      <div class="nav-dot"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="section-title">Open edX <span class="highlight">Repo Health Dashboard</span></div>
+    <div class="section-subtitle">Live, public visibility into the health of the Open edX repository fleet - delivered by Usama Sadiq</div>
+
+    <div class="split">
+      <div>
+        <div class="shot-frame">
+          <img src="../assets/repo-health-dashboard-cropped.png" alt="Open edX Repository Health dashboard, live overview">
+        </div>
+        <div class="shot-cap">openedx-health-dashboard.streamlit.app &middot; live</div>
+      </div>
+
+      <div>
+        <div class="stats">
+          <div class="stat"><div class="stat-n">169</div><div class="stat-l">Repos Tracked</div></div>
+          <div class="stat"><div class="stat-n">119</div><div class="stat-l">Health Checks</div></div>
+          <div class="stat"><div class="stat-n">9</div><div class="stat-l">Scored Metrics</div></div>
+          <div class="stat"><div class="stat-n">Daily</div><div class="stat-l">Data Refresh</div></div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-t"><i class="fas fa-certificate"></i>Built to Standards</div>
+          <div class="info-d">Not homegrown heuristics - every metric maps to <strong>CHAOSS metrics</strong> and <strong>OpenSSF Scorecard checks</strong>, rolled into A-F letter grades.</div>
+        </div>
+
+        <div class="info-box plain">
+          <div class="info-t"><i class="fas fa-toolbox"></i>Beyond Reporting</div>
+          <div class="info-d">Historical trends and deltas, deep-linkable filtered views, and per-repo <strong>remediation snippets</strong> that tell maintainers how to fix a failing check.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chain">
+      <span class="chain-lbl">Built On</span>
+      <span class="chain-txt"><strong>openedx/edx-repo-health</strong> checks &rarr; <strong>openedx/wg-maintenance</strong> pipeline &rarr; <strong>org-health-dashboard</strong> (public, AGPL-3.0) - every piece of the chain lives in the open.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left"><span class="footer-text">opensource.arbisoft.com</span></div>
+    <div class="footer-right">
+      <span class="page-indicator"><span class="page-number">14</span> / 22</span>
+      <a class="nav-btn" href="slide-15-repo-health-live.html" title="Next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+</div>
+<!-- FLOAT-NAV:START -->
+<a class="deck-nav-float prev" href="slide-13-jarvis.html" title="Previous">&#8249;</a>
+<a class="deck-nav-float next" href="slide-15-repo-health-live.html" title="Next">&#8250;</a>
+<!-- FLOAT-NAV:END -->
+</body>
+</html>
