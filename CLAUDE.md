@@ -16,10 +16,9 @@ When asked to change deck content, change the dark slide only.
 
 `q2/dark-v2/` is the current deck - 19 slides, the Q2 leadership review (Apr 1 - Jul 15, 2026).
 
-Root `index.html` is the landing page and links only into `q2/dark-v2/`. Two older decks are still
-deployed and reachable by direct URL, but are unlinked and superseded: `q2/dark/` (14 slides, the
-previous Q2 deck) and the top-level `dark/` (pre-Q2, 15 slides). Archiving here means unlinking,
-not deleting - URLs already shared keep working.
+Root `index.html` is the landing page and links only into `q2/dark-v2/`, the only deck in the repo.
+Two older decks (`q2/dark/`, 14 slides, and the top-level `dark/`, pre-Q2, 15 slides) were deleted
+when Q2 2026 was wound up; those URLs now 404. Recover from git history if ever needed.
 
 `q2/index.html` is a meta-refresh redirect back to root, so `/q2/` does not 404.
 
@@ -131,11 +130,6 @@ Deploying and pushing are separate steps; production can run ahead of `origin/ma
 - Numbered cards (01/02/03) over emoji icons.
 - Font Awesome 6.4.0 and Google Fonts (Inter + JetBrains Mono) load from CDN per slide.
 - Team photos live in `/team/`, referenced from q2 slides as `../../team/<name>.jpg`.
-
-## Stale files
-
-`memory.md` predates the Q2 deck. It describes the old 15-slide `dark/` deck, names the Vercel
-project `arbisoft-opensource`, and omits the alias-pinning trap. Prefer this file.
 
 ## Working style
 
